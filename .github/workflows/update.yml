@@ -3,7 +3,7 @@ name: Update VPN Subscriptions
 on:
   schedule:
     - cron: '*/5 * * * *'  # Запуск каждые 5 минут
-  workflow_dispatch: {}      # Кнопка ручного запуска
+  workflow_dispatch: {}      # Кнопка для ручного запуска
 
 # Защита от наложения запусков (если скрипт работает дольше 5 минут)
 concurrency:
@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # Разрешение на сохранение файлов в GitHub
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -40,19 +41,47 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add subscriptions/
+          # Удаляем базу GeoIP из индекса, чтобы не раздувать репозиторий
           git reset GeoLite2-Country.mmdb || true
           git commit -m "Auto-update subscriptions [skip ci]" || echo "No changes"
-          git push
+          git push origin main || git push origin master
 
-      - name: Push to GitLab mirror
+      - name: Push to Codeberg mirror
         env:
-          GITLAB_AUTH_URL: ${{ secrets.GITLAB_REPO }}
+          CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
+          CODEBERG_USER: "YakovSm"
+          CODEBERG_REPO: "VPN-Subscriptions-Auto"
         run: |
-          git clone "https://${GITLAB_AUTH_URL}" /tmp/gitlab-mirror
-          cp -r subscriptions/* /tmp/gitlab-mirror/
-          cd /tmp/gitlab-mirror
+          # 1. Клонируем репозиторий Codeberg
+          git clone "https://${CODEBERG_USER}:${CODEBERG_TOKEN}@codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}.git" /tmp/codeberg-mirror
+          
+          # 2. Копируем свежие файлы подписок
+          cp -r subscriptions/* /tmp/codeberg-mirror/
+          cd /tmp/codeberg-mirror
+          
+          # 3. Определяем текущую ветку (main или master)
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          
+          # 4. Формируем базовый URL для raw-ссылок Codeberg
+          RAW_BASE="https://codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}/raw/branch/${BRANCH}"
+          
+          # 5. Генерируем файл с ссылками для Яндекс Переводчика
+          echo "# Ссылки через Яндекс Переводчик" > yandex_links.md
+          echo "" >> yandex_links.md
+          echo "Нажмите на нужную подписку, чтобы открыть её через Яндекс Переводчик." >> yandex_links.md
+          echo "" >> yandex_links.md
+          
+          for file in *.txt; do
+            if [ -f "$file" ]; then
+              raw_url="${RAW_BASE}/${file}"
+              yandex_url="https://translate.yandex.ru/translate?url=${raw_url}"
+              echo "- [$file]($yandex_url)" >> yandex_links.md
+            fi
+          done
+          
+          # 6. Коммитим и пушим в Codeberg
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "Mirror update from GitHub" || echo "No changes"
-          git push
+          git push origin ${BRANCH}
