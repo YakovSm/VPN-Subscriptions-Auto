@@ -2,10 +2,10 @@ name: Update VPN Subscriptions
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Запуск каждые 5 минут
+    - cron: '*/10 * * * *'  # Запуск каждые 10 минут
   workflow_dispatch: {}      # Кнопка для ручного запуска
 
-# Защита от наложения запусков (если скрипт работает дольше 5 минут)
+# Защита от наложения запусков (если скрипт работает дольше 10 минут)
 concurrency:
   group: "vpn-updater"
   cancel-in-progress: true
