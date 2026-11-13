@@ -1,0 +1,58 @@
+name: Update VPN Subscriptions
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Запуск каждые 5 минут
+  workflow_dispatch: {}      # Кнопка ручного запуска
+
+# Защита от наложения запусков (если скрипт работает дольше 5 минут)
+concurrency:
+  group: "vpn-updater"
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Разрешение на сохранение файлов в GitHub
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          cache: false
+
+      - name: Download GeoIP Database
+        run: |
+          wget -q -O GeoLite2-Country.mmdb https://github.com/P3TERX/GeoLite.mmdb/raw/download/GeoLite2-Country.mmdb
+
+      - name: Run Go Updater
+        run: |
+          go mod init vpn-updater
+          go get gopkg.in/yaml.v3 github.com/oschwald/geoip2-golang
+          go run main.go
+
+      - name: Commit and push to GitHub
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add subscriptions/
+          git reset GeoLite2-Country.mmdb || true
+          git commit -m "Auto-update subscriptions [skip ci]" || echo "No changes"
+          git push
+
+      - name: Push to GitLab mirror
+        env:
+          GITLAB_AUTH_URL: ${{ secrets.GITLAB_REPO }}
+        run: |
+          git clone "https://${GITLAB_AUTH_URL}" /tmp/gitlab-mirror
+          cp -r subscriptions/* /tmp/gitlab-mirror/
+          cd /tmp/gitlab-mirror
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "Mirror update from GitHub" || echo "No changes"
+          git push
