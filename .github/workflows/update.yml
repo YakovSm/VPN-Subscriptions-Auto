@@ -50,6 +50,7 @@ jobs:
           CODEBERG_TOKEN: ${{ secrets.CODEBERG_TOKEN }}
           CODEBERG_USER: "YakovSm"
           CODEBERG_REPO: "VPN-Subscriptions-Auto"
+          GH_WORKSPACE: ${{ github.workspace }} # <-- Передаем путь из GitHub
         run: |
           # 1. Клонируем репозиторий Codeberg
           git clone "https://${CODEBERG_USER}:${CODEBERG_TOKEN}@codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}.git" /tmp/codeberg-mirror
@@ -63,10 +64,14 @@ jobs:
           mkdir -p Subscriptions
           rm -f Subscriptions/*.txt
           
-          # 4. Копируем свежие подписки в папку Subscriptions
-          cp -r /github/workspace/subscriptions/* Subscriptions/
+          # 4. Копируем свежие подписки (проверяем, есть ли они)
+          if [ -d "${GH_WORKSPACE}/subscriptions" ] && [ "$(ls -A ${GH_WORKSPACE}/subscriptions)" ]; then
+              cp -r ${GH_WORKSPACE}/subscriptions/* Subscriptions/
+          else
+              echo "Внимание: папка subscriptions пуста или не существует. Пропускаем копирование."
+          fi
           
-          # 5. Определяем текущую ветку и базовый URL
+          # 5. Определяем ветку и базовый URL
           BRANCH=$(git rev-parse --abbrev-ref HEAD)
           RAW_BASE="https://codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}/raw/branch/${BRANCH}/Subscriptions"
           
@@ -81,13 +86,13 @@ jobs:
           echo "Используйте эти ссылки, если Codeberg заблокирован." >> yandex_links.md
           echo "" >> yandex_links.md
           
-          # 7. Проходимся по файлам внутри папки Subscriptions
+          # 7. Проходимся по файлам
           for filepath in Subscriptions/*.txt; do
             if [ -f "$filepath" ]; then
-              # Получаем только имя файла без пути
               file=$(basename "$filepath")
+              CLEAN_NAME="${file#*_}"
               
-              DISPLAY_NAME=$(python3 -c "import urllib.parse, sys; print(urllib.parse.unquote(sys.argv[1]))" "${file%.*}")
+              DISPLAY_NAME=$(python3 -c "import urllib.parse, sys; print(urllib.parse.unquote(sys.argv[1]))" "${CLEAN_NAME%.*}")
               ENCODED_FILE=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "$file")
               
               RAW_URL="${RAW_BASE}/${ENCODED_FILE}"
