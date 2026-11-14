@@ -71,6 +71,7 @@ hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@hold.wwwinternetvid
 hysteria2://wrSuBorIlf@72.56.116.57:443?insecure=1&sni=hys9.wba-pn.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2072.56.116.57%3A443
 hysteria2://wrSuBorIlf@hys9.wba-pn.ru:443?insecure=1#Unknown%20%7C%20HYSTERIA2%20%7C%20hys9.wba-pn.ru%3A443
 hysteria2://zhangyang@130.61.50.75:6443?insecure=1&sni=130.61.50.75#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20HYSTERIA2%20%7C%20130.61.50.75%3A6443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.214:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.discoverfreshgraduatejobsstartyourprofessionaljourney.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.214%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.114.132:443?security=tls&insecure=0&headerType=none&type=tcp&allowInsecure=0&sni=courses.findconnectwithemployersandbuildprofessionalnetwork.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.114.132%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.26:443?security=tls&sni=blog.searchnationwidecareerchangehelperandguidancetoday.com&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.26%3A443
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-b1.catcat321.com:20027?security=tls&sni=hk.catxstar.com&type=tcp&path=/#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-b1.catcat321.com%3A20027
