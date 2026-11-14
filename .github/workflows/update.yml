@@ -73,9 +73,21 @@ jobs:
           
           for file in *.txt; do
             if [ -f "$file" ]; then
-              raw_url="${RAW_BASE}/${file}"
-              yandex_url="https://translate.yandex.ru/translate?url=${raw_url}"
-              echo "- [$file]($yandex_url)" >> yandex_links.md
+              # Кодируем имя файла для ссылки (пробелы станут %20)
+              ENCODED_FILE=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "$file")
+              
+              # Собираем raw-ссылку
+              RAW_URL="${RAW_BASE}/${ENCODED_FILE}"
+              
+              # Кодируем весь URL для параметра url= (чтобы Яндекс точно его понял)
+              ENCODED_RAW_URL=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1], safe=''))" "$RAW_URL")
+              
+              YANDEX_URL="https://translate.yandex.ru/translate?url=${ENCODED_RAW_URL}"
+              
+              # Декодируем имя файла для красивого отображения (убираем %E5%85...)
+              DISPLAY_NAME=$(python3 -c "import urllib.parse, sys; print(urllib.parse.unquote(sys.argv[1]))" "$file")
+              
+              echo "- [$DISPLAY_NAME]($YANDEX_URL)" >> yandex_links.md
             fi
           done
           
@@ -83,5 +95,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
+          git commit -m "Mirror update from GitHub" || echo "No changes"
+          git push origin ${BRANCH}
           git commit -m "Mirror update from GitHub" || echo "No changes"
           git push origin ${BRANCH}
