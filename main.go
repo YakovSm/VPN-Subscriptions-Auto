@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"context"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
@@ -13,6 +14,7 @@ import (
 	"path/filepath"
 	"regexp"
 	"sort"
+	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -21,78 +23,99 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// ==========================================
-// НАСТРОЙКИ (ВСТАВЬТЕ СЮДА ВАШИ ССЫЛКИ)
-// ==========================================
+// Производительность регулируется этими константами.
+const (
+	fetchWorkers  = 12
+	tcpWorkers    = 512
+	tcpTimeout    = 500 * time.Millisecond
+	dnsTimeout    = 1500 * time.Millisecond
+	httpTimeout   = 10 * time.Second
+	maxSourceSize = 64 << 20 // 64 MiB на один источник
+)
+
+var (
+	geoDb *geoip2.Reader
+
+	httpClient = &http.Client{
+		Timeout: httpTimeout,
+		Transport: &http.Transport{
+			Proxy:                 http.ProxyFromEnvironment,
+			MaxIdleConns:          256,
+			MaxIdleConnsPerHost:   8,
+			MaxConnsPerHost:       8,
+			IdleConnTimeout:       90 * time.Second,
+			TLSHandshakeTimeout:   7 * time.Second,
+			ResponseHeaderTimeout: 12 * time.Second,
+			ExpectContinueTimeout: time.Second,
+		},
+	}
+
+	invalidFilenameRE = regexp.MustCompile(`[<>:"/\\|?*]`)
+	profileTitleRE    = regexp.MustCompile(`(?mi)^#\s*profile-title:\s*(.+)$`)
+	dnsCache          sync.Map // map[string]*dnsRecord; DNS выполняется один раз на hostname
+)
+
 var sources = []string{
-    "https://raw.githubusercontent.com/Xumuk0/White-List-VPN/refs/heads/main/%D0%A0%D0%B5%D1%86%D0%B5%D0%BF%D1%82-%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%BE%D0%B2.txt",
-    "https://raw.githubusercontent.com/fifthidea/sub/refs/heads/main/sub/sub-full-plaintxt.txt",
-    "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
-    "https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/refs/heads/main/final_sorted",
-    "https://raw.githubusercontent.com/svinakraft-maker/FlareFeed/refs/heads/main/public/podpiska.txt",
-    "https://raw.githubusercontent.com/HalyavusVPNUS/vless-subscription/refs/heads/main/hysteria.txt",
-    "https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/refs/heads/main/sub/URI.yml",
-    "https://raw.githubusercontent.com/nick-core-web/reality-subscriptions/refs/heads/main/all.txt",
-    "https://raw.githubusercontent.com/RnRLover/rjsxrd-karing-subscription/refs/heads/main/subscription.json",
-    "https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/refs/heads/main/all_servers.txt",
-    "https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results/proxies.txt",
-    "https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
-    "https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
-    "https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/refs/heads/master/all",
-    "https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/refs/heads/main/output/base64/mix-uri",
-    "https://raw.githubusercontent.com/Ruk1ng001/freeSub/refs/heads/main/v2ray",
-    "https://raw.githubusercontent.com/teknovpnhub/v2ray-subscription/refs/heads/main/servers.txt",
-    "https://raw.githubusercontent.com/ripaojiedian/freenode/refs/heads/main/sub",
-    "https://gitverse.ru/api/repos/ru-wbl/wl/raw/branch/master/KvRuVPN%2FKvRuVPN.txt",
-    "https://gitverse.ru/api/repos/Pizduk/PizdukVPN/raw/branch/master/WlSubPiz.txt",
-    "https://gitverse.ru/api/repos/flaafix/AetrisVPN_white_list_lite/raw/branch/master/AetrisVPN.txt",
-    "https://www.xrayvip.com/free.txt",
-    "https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat",
-    "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/refs/heads/main/main/mix.txt",
-    "https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/merged.txt",
-    "https://raw.githubusercontent.com/hamedp-71/Sub_Checker_Creator/refs/heads/main/final.txt",
-    "https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt",
-    "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt",
-    "https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/trojan.txt",
-    "https://raw.githubusercontent.com/LalatinaHub/Mineral/refs/heads/master/result/nodes",
-    "https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
-    "https://raw.githubusercontent.com/shabane/kamaji/refs/heads/master/hub/best.txt",
-    "https://raw.githubusercontent.com/Danialsamadi/v2go/refs/heads/main/AllConfigsSub.txt",
-    "https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/vless.txt",
-    "https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/trojan.txt",
-    "https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/other.txt",
-    "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/v2ray/all_sub.txt",
-    "https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/config.txt",
-    "https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_Sub.txt",
-    "https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/sub/sub_merge.txt",
-    "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/mixed",
-    "https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
-    "https://openproxylist.com/v2ray/rawlist/subscribe",
-    "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt",
-    "https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/configs/subscription-all.txt",
-    "https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mtn/sub_1.txt",
-    "https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY.txt",
-    "https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
-    "https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT",
-    "https://github.com/Argh94/Proxy-List/raw/refs/heads/main/All_Config.txt",
-    "https://raw.githubusercontent.com/histeenn/VLESS-PO-GRIBI/refs/heads/main/deploy/sub.txt",
-    "https://raw.githubusercontent.com/nikita29a/FreeProxyList/refs/heads/main/mirror/1.txt",
-    "https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/all_valid_proxies.txt",
-    "https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/url_work.txt",
-    "https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/AllConfigsSub.txt",
-    "https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt",
-    "https://raw.githubusercontent.com/patterniha/Free-Configs/refs/heads/main/configs.txt",
-    "https://robin.victoriacross.ir/",
-    "https://raw.githubusercontent.com/aneek0/goida-vpn-configs/refs/heads/main/githubmirror/26.txt",
+	"https://raw.githubusercontent.com/Xumuk0/White-List-VPN/refs/heads/main/%D0%A0%D0%B5%D1%86%D0%B5%D0%BF%D1%82-%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%BE%D0%B2.txt",
+	"https://raw.githubusercontent.com/fifthidea/sub/refs/heads/main/sub/sub-full-plaintxt.txt",
+	"https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
+	"https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/refs/heads/main/final_sorted",
+	"https://raw.githubusercontent.com/svinakraft-maker/FlareFeed/refs/heads/main/public/podpiska.txt",
+	"https://raw.githubusercontent.com/HalyavusVPNUS/vless-subscription/refs/heads/main/hysteria.txt",
+	"https://raw.githubusercontent.com/cbusifabcap/daily_free_vpn/refs/heads/main/sub/URI.yml",
+	"https://raw.githubusercontent.com/nick-core-web/reality-subscriptions/refs/heads/main/all.txt",
+	"https://raw.githubusercontent.com/RnRLover/rjsxrd-karing-subscription/refs/heads/main/subscription.json",
+	"https://raw.githubusercontent.com/alireza786786/Free-V2ray-Configs/refs/heads/main/all_servers.txt",
+	"https://raw.githubusercontent.com/F0rc3Run/F0rc3Run/refs/heads/main/Best-Results/proxies.txt",
+	"https://raw.githubusercontent.com/ShadowException/VPN/refs/heads/main/configs/VPN-cat",
+	"https://raw.githubusercontent.com/4n0nymou3/multi-proxy-config-fetcher/refs/heads/main/configs/proxy_configs.txt",
+	"https://raw.githubusercontent.com/awesome-vpn/awesome-vpn/refs/heads/master/all",
+	"https://raw.githubusercontent.com/wuqb2i4f/xray-config-toolkit/refs/heads/main/output/base64/mix-uri",
+	"https://raw.githubusercontent.com/Ruk1ng001/freeSub/refs/heads/main/v2ray",
+	"https://raw.githubusercontent.com/teknovpnhub/v2ray-subscription/refs/heads/main/servers.txt",
+	"https://raw.githubusercontent.com/ripaojiedian/freenode/refs/heads/main/sub",
+	"https://gitverse.ru/api/repos/ru-wbl/wl/raw/branch/master/KvRuVPN%2FKvRuVPN.txt",
+	"https://gitverse.ru/api/repos/Pizduk/PizdukVPN/raw/branch/master/WlSubPiz.txt",
+	"https://gitverse.ru/api/repos/flaafix/AetrisVPN_white_list_lite/raw/branch/master/AetrisVPN.txt",
+	"https://www.xrayvip.com/free.txt",
+	"https://raw.githubusercontent.com/Mosifree/-FREE2CONFIG/refs/heads/main/Clash_Movaghat",
+	"https://raw.githubusercontent.com/iboxz/free-v2ray-collector/refs/heads/main/main/mix.txt",
+	"https://raw.githubusercontent.com/Barabama/FreeNodes/refs/heads/main/nodes/merged.txt",
+	"https://raw.githubusercontent.com/hamedp-71/Sub_Checker_Creator/refs/heads/main/final.txt",
+	"https://raw.githubusercontent.com/rango-cfs/NewCollector/refs/heads/main/v2ray_links.txt",
+	"https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/vless.txt",
+	"https://raw.githubusercontent.com/mohamadfg-dev/telegram-v2ray-configs-collector/refs/heads/main/category/trojan.txt",
+	"https://raw.githubusercontent.com/LalatinaHub/Mineral/refs/heads/master/result/nodes",
+	"https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt",
+	"https://raw.githubusercontent.com/shabane/kamaji/refs/heads/master/hub/best.txt",
+	"https://raw.githubusercontent.com/Danialsamadi/v2go/refs/heads/main/AllConfigsSub.txt",
+	"https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/vless.txt",
+	"https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/trojan.txt",
+	"https://raw.githubusercontent.com/Firmfox/Proxify/refs/heads/main/v2ray_configs/separated_by_protocol/other.txt",
+	"https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/refs/heads/main/subscriptions/v2ray/all_sub.txt",
+	"https://raw.githubusercontent.com/itsyebekhe/PSG/refs/heads/main/config.txt",
+	"https://raw.githubusercontent.com/barry-far/V2ray-Config/refs/heads/main/All_Configs_Sub.txt",
+	"https://raw.githubusercontent.com/mahdibland/V2RayAggregator/refs/heads/master/sub/sub_merge.txt",
+	"https://raw.githubusercontent.com/Surfboardv2ray/TGParse/refs/heads/main/splitted/mixed",
+	"https://raw.githubusercontent.com/Pawdroid/Free-servers/refs/heads/main/sub",
+	"https://openproxylist.com/v2ray/rawlist/subscribe",
+	"https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt",
+	"https://raw.githubusercontent.com/lagzian/SS-Collector/refs/heads/main/configs/subscription-all.txt",
+	"https://raw.githubusercontent.com/mahsanet/MahsaFreeConfig/refs/heads/main/mtn/sub_1.txt",
+	"https://raw.githubusercontent.com/roosterkid/openproxylist/refs/heads/main/V2RAY.txt",
+	"https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/refs/heads/main/sub/mix",
+	"https://raw.githubusercontent.com/Created-By/Telegram-Eag1e_YT/refs/heads/main/%40Eag1e_YT",
+	"https://github.com/Argh94/Proxy-List/raw/refs/heads/main/All_Config.txt",
+	"https://raw.githubusercontent.com/histeenn/VLESS-PO-GRIBI/refs/heads/main/deploy/sub.txt",
+	"https://raw.githubusercontent.com/nikita29a/FreeProxyList/refs/heads/main/mirror/1.txt",
+	"https://raw.githubusercontent.com/sakha1370/OpenRay/refs/heads/main/output/all_valid_proxies.txt",
+	"https://raw.githubusercontent.com/VOID-Anonymity/V.O.I.D-VPN_Bypass/refs/heads/main/url_work.txt",
+	"https://raw.githubusercontent.com/EEvanescence/4Diana/refs/heads/main/AllConfigsSub.txt",
+	"https://raw.githubusercontent.com/iampedii/whitedns-sub/refs/heads/main/base64.txt",
+	"https://raw.githubusercontent.com/patterniha/Free-Configs/refs/heads/main/configs.txt",
+	"https://robin.victoriacross.ir/",
+	"https://raw.githubusercontent.com/aneek0/goida-vpn-configs/refs/heads/main/githubmirror/26.txt",
 }
-
-var targetSchemes = map[string]bool{"vless": true, "trojan": true, "hysteria2": true, "hy2": true}
-var geoDb *geoip2.Reader
-var ipCache sync.Map
-
-// ==========================================
-// СТРУКТУРЫ ДЛЯ ПАРСИНГА
-// ==========================================
 
 type XrayConfig struct {
 	Remarks   string `json:"remarks"`
@@ -118,8 +141,8 @@ type XrayConfig struct {
 			} `json:"servers"`
 		} `json:"settings"`
 		StreamSettings struct {
-			Network  string `json:"network"`
-			Security string `json:"security"`
+			Network         string `json:"network"`
+			Security        string `json:"security"`
 			RealitySettings struct {
 				ServerName  string `json:"serverName"`
 				Fingerprint string `json:"fingerprint"`
@@ -162,8 +185,8 @@ type SingBoxConfig struct {
 			ServiceName string            `json:"service_name"`
 		} `json:"transport"`
 		Tls struct {
-			Enabled    bool     `json:"enabled"`
-			ServerName string   `json:"server_name"`
+			Enabled    bool   `json:"enabled"`
+			ServerName string `json:"server_name"`
 			Utls       struct {
 				Fingerprint string `json:"fingerprint"`
 			} `json:"utls"`
@@ -207,72 +230,125 @@ type ClashConfig struct {
 	} `yaml:"proxies"`
 }
 
-// ==========================================
-// ВСПОМОГАТЕЛЬНЫЕ ФУНКЦИИ
-// ==========================================
+// ===============================
+// Кодирование и небольшие утилиты
+// ===============================
 
 func encodeName(name string) string {
-	s := url.QueryEscape(name)
-	s = strings.ReplaceAll(s, "+", "%20")
-	return s
+	return strings.ReplaceAll(url.QueryEscape(name), "+", "%20")
 }
 
 func buildQuery(params map[string]string) string {
-	var keys []string
+	if len(params) == 0 {
+		return ""
+	}
+	keys := make([]string, 0, len(params))
 	for k, v := range params {
 		if v != "" {
 			keys = append(keys, k)
 		}
 	}
 	sort.Strings(keys)
-	var sb strings.Builder
+
+	var b strings.Builder
+	b.Grow(len(keys) * 24)
 	for i, k := range keys {
-		if i > 0 { sb.WriteString("&") }
-		sb.WriteString(url.QueryEscape(k))
-		sb.WriteString("=")
-		val := url.QueryEscape(params[k])
-		val = strings.ReplaceAll(val, "%2F", "/")
-		val = strings.ReplaceAll(val, "+", "%20")
-		sb.WriteString(val)
+		if i > 0 {
+			b.WriteByte('&')
+		}
+		b.WriteString(url.QueryEscape(k))
+		b.WriteByte('=')
+		v := url.QueryEscape(params[k])
+		v = strings.ReplaceAll(v, "%2F", "/")
+		v = strings.ReplaceAll(v, "+", "%20")
+		b.WriteString(v)
 	}
-	return sb.String()
+	return b.String()
+}
+
+func makeURI(scheme, credential, host string, port int, params map[string]string, name string) string {
+	query := buildQuery(params)
+	authority := net.JoinHostPort(host, strconv.Itoa(port)) // корректно обрабатывает IPv6
+	var b strings.Builder
+	b.Grow(len(scheme) + len(credential) + len(authority) + len(query) + len(name) + 12)
+	b.WriteString(scheme)
+	b.WriteString("://")
+	b.WriteString(credential)
+	b.WriteByte('@')
+	b.WriteString(authority)
+	b.WriteByte('?')
+	b.WriteString(query)
+	b.WriteByte('#')
+	b.WriteString(encodeName(name))
+	return b.String()
 }
 
 func sanitizeFilename(name string) string {
-	re := regexp.MustCompile(`[<>:"/\\|?*]`)
-	name = re.ReplaceAllString(name, "_")
-	name = strings.TrimSpace(name)
-	name = strings.Trim(name, ".")
-	if name == "" { return "unnamed" }
+	name = invalidFilenameRE.ReplaceAllString(name, "_")
+	name = strings.Trim(strings.TrimSpace(name), ".")
+	if name == "" {
+		return "unnamed"
+	}
 	return name
 }
 
+// Удаляем комментарии построчно без Scanner и промежуточных []string.
 func stripMetaLines(content string) string {
-	var sb strings.Builder
-	scanner := bufio.NewScanner(strings.NewReader(content))
-	scanner.Buffer(make([]byte, 1024*1024), 1024*1024)
-	for scanner.Scan() {
-		line := scanner.Text()
-		if !strings.HasPrefix(strings.TrimSpace(line), "#") {
-			sb.WriteString(line)
-			sb.WriteString("\n")
+	var b strings.Builder
+	b.Grow(len(content))
+	for len(content) > 0 {
+		end := strings.IndexByte(content, '\n')
+		line, rest := content, ""
+		if end >= 0 {
+			line, rest = content[:end], content[end+1:]
 		}
+		if !strings.HasPrefix(strings.TrimSpace(line), "#") {
+			b.WriteString(line)
+			if end >= 0 {
+				b.WriteByte('\n')
+			}
+		}
+		content = rest
 	}
-	return sb.String()
+	return b.String()
 }
 
 func isTargetScheme(line string) bool {
-	return strings.HasPrefix(line, "vless://") || strings.HasPrefix(line, "trojan://") ||
-		strings.HasPrefix(line, "hysteria2://") || strings.HasPrefix(line, "hy2://")
+	i := strings.Index(line, "://")
+	if i < 1 {
+		return false
+	}
+	switch strings.ToLower(line[:i]) {
+	case "vless", "trojan", "hysteria2", "hy2":
+		return true
+	default:
+		return false
+	}
 }
 
-// ==========================================
-// ПАРСИНГ ФОРМАТОВ
-// ==========================================
+func appendTextURIs(dst []string, text string) []string {
+	for len(text) > 0 {
+		end := strings.IndexByte(text, '\n')
+		line, rest := text, ""
+		if end >= 0 {
+			line, rest = text[:end], text[end+1:]
+		}
+		line = strings.TrimSpace(line)
+		if isTargetScheme(line) {
+			dst = append(dst, line)
+		}
+		text = rest
+	}
+	return dst
+}
+
+// ===============================
+// Построение URI из JSON/YAML
+// ===============================
 
 func getStreamParams(s struct {
-	Network  string `json:"network"`
-	Security string `json:"security"`
+	Network         string `json:"network"`
+	Security        string `json:"security"`
 	RealitySettings struct {
 		ServerName  string `json:"serverName"`
 		Fingerprint string `json:"fingerprint"`
@@ -296,31 +372,57 @@ func getStreamParams(s struct {
 		Mode string `json:"mode"`
 	} `json:"xhttpSettings"`
 }) map[string]string {
-	p := make(map[string]string)
+	p := make(map[string]string, 10)
 	network := s.Network
-	if network == "" { network = "tcp" }
+	if network == "" {
+		network = "tcp"
+	}
 	p["type"] = network
 	if s.Security != "" && s.Security != "none" {
 		p["security"] = s.Security
 		if s.Security == "reality" {
-			if s.RealitySettings.ServerName != "" { p["sni"] = s.RealitySettings.ServerName }
-			if s.RealitySettings.Fingerprint != "" { p["fp"] = s.RealitySettings.Fingerprint }
-			if s.RealitySettings.PublicKey != "" { p["pbk"] = s.RealitySettings.PublicKey }
-			if s.RealitySettings.ShortId != "" { p["sid"] = s.RealitySettings.ShortId }
+			if s.RealitySettings.ServerName != "" {
+				p["sni"] = s.RealitySettings.ServerName
+			}
+			if s.RealitySettings.Fingerprint != "" {
+				p["fp"] = s.RealitySettings.Fingerprint
+			}
+			if s.RealitySettings.PublicKey != "" {
+				p["pbk"] = s.RealitySettings.PublicKey
+			}
+			if s.RealitySettings.ShortId != "" {
+				p["sid"] = s.RealitySettings.ShortId
+			}
 		} else if s.Security == "tls" {
-			if s.TlsSettings.ServerName != "" { p["sni"] = s.TlsSettings.ServerName }
-			if s.TlsSettings.Fingerprint != "" { p["fp"] = s.TlsSettings.Fingerprint }
+			if s.TlsSettings.ServerName != "" {
+				p["sni"] = s.TlsSettings.ServerName
+			}
+			if s.TlsSettings.Fingerprint != "" {
+				p["fp"] = s.TlsSettings.Fingerprint
+			}
 		}
 	}
 	if network == "ws" {
-		if s.WsSettings.Path != "" { p["path"] = s.WsSettings.Path }
-		if s.WsSettings.Host != "" { p["host"] = s.WsSettings.Host }
+		if s.WsSettings.Path != "" {
+			p["path"] = s.WsSettings.Path
+		}
+		if s.WsSettings.Host != "" {
+			p["host"] = s.WsSettings.Host
+		}
 	} else if network == "grpc" {
-		if s.GrpcSettings.ServiceName != "" { p["serviceName"] = s.GrpcSettings.ServiceName }
+		if s.GrpcSettings.ServiceName != "" {
+			p["serviceName"] = s.GrpcSettings.ServiceName
+		}
 	} else if network == "xhttp" {
-		if s.XhttpSettings.Path != "" { p["path"] = s.XhttpSettings.Path }
-		if s.XhttpSettings.Host != "" { p["host"] = s.XhttpSettings.Host }
-		if s.XhttpSettings.Mode != "" { p["mode"] = s.XhttpSettings.Mode }
+		if s.XhttpSettings.Path != "" {
+			p["path"] = s.XhttpSettings.Path
+		}
+		if s.XhttpSettings.Host != "" {
+			p["host"] = s.XhttpSettings.Host
+		}
+		if s.XhttpSettings.Mode != "" {
+			p["mode"] = s.XhttpSettings.Mode
+		}
 	}
 	return p
 }
@@ -329,32 +431,43 @@ func extractFromXray(cfg XrayConfig) []string {
 	var uris []string
 	for _, ob := range cfg.Outbounds {
 		proto := strings.ToLower(ob.Protocol)
-		if proto != "vless" && proto != "trojan" && proto != "hysteria2" { continue }
-		stream := ob.StreamSettings
-		params := getStreamParams(stream)
-
-		if proto == "vless" {
+		if proto != "vless" && proto != "trojan" && proto != "hysteria2" {
+			continue
+		}
+		params := getStreamParams(ob.StreamSettings)
+		switch proto {
+		case "vless":
 			for _, vnext := range ob.Settings.Vnext {
 				for _, user := range vnext.Users {
-					p := make(map[string]string)
-					for k, v := range params { p[k] = v }
+					p := make(map[string]string, len(params)+2)
+					for k, v := range params {
+						p[k] = v
+					}
 					p["encryption"] = user.Encryption
-					if p["encryption"] == "" { p["encryption"] = "none" }
-					if user.Flow != "" { p["flow"] = user.Flow }
-					uris = append(uris, fmt.Sprintf("vless://%s@%s:%d?%s#%s", user.ID, vnext.Address, vnext.Port, buildQuery(p), encodeName(ob.Tag)))
+					if p["encryption"] == "" {
+						p["encryption"] = "none"
+					}
+					if user.Flow != "" {
+						p["flow"] = user.Flow
+					}
+					uris = append(uris, makeURI("vless", user.ID, vnext.Address, vnext.Port, p, ob.Tag))
 				}
 			}
-		} else if proto == "trojan" {
+		case "trojan":
 			for _, srv := range ob.Settings.Servers {
-				uris = append(uris, fmt.Sprintf("trojan://%s@%s:%d?%s#%s", srv.Password, srv.Address, srv.Port, buildQuery(params), encodeName(ob.Tag)))
+				uris = append(uris, makeURI("trojan", srv.Password, srv.Address, srv.Port, params, ob.Tag))
 			}
-		} else if proto == "hysteria2" {
+		case "hysteria2":
 			for _, srv := range ob.Settings.Servers {
 				pwd := srv.Password
-				if pwd == "" { pwd = srv.Auth }
-				hp := make(map[string]string)
-				if srv.Sni != "" { hp["sni"] = srv.Sni }
-				uris = append(uris, fmt.Sprintf("hysteria2://%s@%s:%d?%s#%s", pwd, srv.Address, srv.Port, buildQuery(hp), encodeName(ob.Tag)))
+				if pwd == "" {
+					pwd = srv.Auth
+				}
+				hp := make(map[string]string, 1)
+				if srv.Sni != "" {
+					hp["sni"] = srv.Sni
+				}
+				uris = append(uris, makeURI("hysteria2", pwd, srv.Address, srv.Port, hp, ob.Tag))
 			}
 		}
 	}
@@ -365,16 +478,26 @@ func extractFromSingBox(cfg SingBoxConfig) []string {
 	var uris []string
 	for _, ob := range cfg.Outbounds {
 		t := strings.ToLower(ob.Type)
-		if t != "vless" && t != "trojan" && t != "hysteria2" { continue }
-		p := make(map[string]string)
+		if t != "vless" && t != "trojan" && t != "hysteria2" {
+			continue
+		}
+		p := make(map[string]string, 12)
 		transport := ob.Transport.Type
-		if transport == "" { transport = "tcp" }
+		if transport == "" {
+			transport = "tcp"
+		}
 		p["type"] = transport
 		if ob.Tls.Enabled {
 			p["security"] = "tls"
-			if ob.Tls.ServerName != "" { p["sni"] = ob.Tls.ServerName }
-			if ob.Tls.Utls.Fingerprint != "" { p["fp"] = ob.Tls.Utls.Fingerprint }
-			if len(ob.Tls.Alpn) > 0 { p["alpn"] = strings.Join(ob.Tls.Alpn, ",") }
+			if ob.Tls.ServerName != "" {
+				p["sni"] = ob.Tls.ServerName
+			}
+			if ob.Tls.Utls.Fingerprint != "" {
+				p["fp"] = ob.Tls.Utls.Fingerprint
+			}
+			if len(ob.Tls.Alpn) > 0 {
+				p["alpn"] = strings.Join(ob.Tls.Alpn, ",")
+			}
 		}
 		if ob.Reality.Enabled {
 			p["security"] = "reality"
@@ -383,22 +506,30 @@ func extractFromSingBox(cfg SingBoxConfig) []string {
 			p["sid"] = ob.Reality.ShortID
 		}
 		if transport == "ws" {
-			if ob.Transport.Path != "" { p["path"] = ob.Transport.Path }
-			if host, ok := ob.Transport.Headers["Host"]; ok { p["host"] = host }
-		} else if transport == "grpc" {
-			if ob.Transport.ServiceName != "" { p["serviceName"] = ob.Transport.ServiceName }
+			if ob.Transport.Path != "" {
+				p["path"] = ob.Transport.Path
+			}
+			if host, ok := ob.Transport.Headers["Host"]; ok {
+				p["host"] = host
+			}
+		} else if transport == "grpc" && ob.Transport.ServiceName != "" {
+			p["serviceName"] = ob.Transport.ServiceName
 		}
-
-		if t == "vless" {
+		switch t {
+		case "vless":
 			p["encryption"] = "none"
-			if ob.Flow != "" { p["flow"] = ob.Flow }
-			uris = append(uris, fmt.Sprintf("vless://%s@%s:%d?%s#%s", ob.UUID, ob.Server, ob.ServerPort, buildQuery(p), encodeName(ob.Tag)))
-		} else if t == "trojan" {
-			uris = append(uris, fmt.Sprintf("trojan://%s@%s:%d?%s#%s", ob.Password, ob.Server, ob.ServerPort, buildQuery(p), encodeName(ob.Tag)))
-		} else if t == "hysteria2" {
-			hp := make(map[string]string)
-			if ob.Tls.ServerName != "" { hp["sni"] = ob.Tls.ServerName }
-			uris = append(uris, fmt.Sprintf("hysteria2://%s@%s:%d?%s#%s", ob.Password, ob.Server, ob.ServerPort, buildQuery(hp), encodeName(ob.Tag)))
+			if ob.Flow != "" {
+				p["flow"] = ob.Flow
+			}
+			uris = append(uris, makeURI("vless", ob.UUID, ob.Server, ob.ServerPort, p, ob.Tag))
+		case "trojan":
+			uris = append(uris, makeURI("trojan", ob.Password, ob.Server, ob.ServerPort, p, ob.Tag))
+		case "hysteria2":
+			hp := make(map[string]string, 1)
+			if ob.Tls.ServerName != "" {
+				hp["sni"] = ob.Tls.ServerName
+			}
+			uris = append(uris, makeURI("hysteria2", ob.Password, ob.Server, ob.ServerPort, hp, ob.Tag))
 		}
 	}
 	return uris
@@ -408,15 +539,25 @@ func extractFromClash(cfg ClashConfig) []string {
 	var uris []string
 	for _, proxy := range cfg.Proxies {
 		t := strings.ToLower(proxy.Type)
-		if t != "vless" && t != "trojan" && t != "hysteria2" { continue }
-		p := make(map[string]string)
+		if t != "vless" && t != "trojan" && t != "hysteria2" {
+			continue
+		}
+		p := make(map[string]string, 10)
 		network := proxy.Network
-		if network == "" { network = "tcp" }
+		if network == "" {
+			network = "tcp"
+		}
 		p["type"] = network
 		if proxy.Tls {
 			p["security"] = "tls"
-			if proxy.Servername != "" { p["sni"] = proxy.Servername } else if proxy.Sni != "" { p["sni"] = proxy.Sni }
-			if proxy.ClientFingerprint != "" { p["fp"] = proxy.ClientFingerprint }
+			if proxy.Servername != "" {
+				p["sni"] = proxy.Servername
+			} else if proxy.Sni != "" {
+				p["sni"] = proxy.Sni
+			}
+			if proxy.ClientFingerprint != "" {
+				p["fp"] = proxy.ClientFingerprint
+			}
 		}
 		if proxy.RealityOpts.PublicKey != "" {
 			p["security"] = "reality"
@@ -424,266 +565,570 @@ func extractFromClash(cfg ClashConfig) []string {
 			p["sid"] = proxy.RealityOpts.ShortId
 		}
 		if network == "ws" {
-			if proxy.WsOpts.Path != "" { p["path"] = proxy.WsOpts.Path }
-			if proxy.WsOpts.Headers.Host != "" { p["host"] = proxy.WsOpts.Headers.Host }
-		} else if network == "grpc" {
-			if proxy.GrpcOpts.ServiceName != "" { p["serviceName"] = proxy.GrpcOpts.ServiceName }
+			if proxy.WsOpts.Path != "" {
+				p["path"] = proxy.WsOpts.Path
+			}
+			if proxy.WsOpts.Headers.Host != "" {
+				p["host"] = proxy.WsOpts.Headers.Host
+			}
+		} else if network == "grpc" && proxy.GrpcOpts.ServiceName != "" {
+			p["serviceName"] = proxy.GrpcOpts.ServiceName
 		}
-
-		if t == "vless" {
+		switch t {
+		case "vless":
 			p["encryption"] = "none"
-			uris = append(uris, fmt.Sprintf("vless://%s@%s:%d?%s#%s", proxy.UUID, proxy.Server, proxy.Port, buildQuery(p), encodeName(proxy.Name)))
-		} else if t == "trojan" {
-			uris = append(uris, fmt.Sprintf("trojan://%s@%s:%d?%s#%s", proxy.Password, proxy.Server, proxy.Port, buildQuery(p), encodeName(proxy.Name)))
-		} else if t == "hysteria2" {
-			hp := make(map[string]string)
-			if proxy.Sni != "" { hp["sni"] = proxy.Sni }
-			uris = append(uris, fmt.Sprintf("hysteria2://%s@%s:%d?%s#%s", proxy.Password, proxy.Server, proxy.Port, buildQuery(hp), encodeName(proxy.Name)))
+			uris = append(uris, makeURI("vless", proxy.UUID, proxy.Server, proxy.Port, p, proxy.Name))
+		case "trojan":
+			uris = append(uris, makeURI("trojan", proxy.Password, proxy.Server, proxy.Port, p, proxy.Name))
+		case "hysteria2":
+			hp := make(map[string]string, 1)
+			if proxy.Sni != "" {
+				hp["sni"] = proxy.Sni
+			}
+			uris = append(uris, makeURI("hysteria2", proxy.Password, proxy.Server, proxy.Port, hp, proxy.Name))
 		}
 	}
 	return uris
 }
 
 func extractFromB64OrText(content string) []string {
-	var uris []string
 	clean := stripMetaLines(content)
-	decoded, err := base64.StdEncoding.DecodeString(strings.TrimSpace(clean))
-	if err == nil {
-		scanner := bufio.NewScanner(strings.NewReader(string(decoded)))
-		scanner.Buffer(make([]byte, 1024*1024), 1024*1024)
-		for scanner.Scan() {
-			line := strings.TrimSpace(scanner.Text())
-			if isTargetScheme(line) { uris = append(uris, line) }
+	trimmed := strings.TrimSpace(clean)
+	if trimmed != "" {
+		decoded, err := base64.StdEncoding.DecodeString(trimmed)
+		if err != nil {
+			decoded, err = base64.RawStdEncoding.DecodeString(trimmed)
+		}
+		if err != nil {
+			decoded, err = base64.URLEncoding.DecodeString(trimmed)
+		}
+		if err != nil {
+			decoded, err = base64.RawURLEncoding.DecodeString(trimmed)
+		}
+		if err == nil {
+			if uris := appendTextURIs(nil, string(decoded)); len(uris) > 0 {
+				return uris
+			}
 		}
 	}
-	if len(uris) == 0 {
-		scanner := bufio.NewScanner(strings.NewReader(clean))
-		scanner.Buffer(make([]byte, 1024*1024), 1024*1024)
-		for scanner.Scan() {
-			line := strings.TrimSpace(scanner.Text())
-			if isTargetScheme(line) { uris = append(uris, line) }
-		}
-	}
-	return uris
+	return appendTextURIs(nil, clean)
 }
 
+// JSON сначала классифицируется по первому outbound, после чего декодируется
+// ровно в одну целевую структуру. Это дешевле нескольких полных Unmarshal подряд.
 func extractURIs(content string) ([]string, interface{}) {
-	clean := strings.TrimSpace(stripMetaLines(content))
-	if strings.HasPrefix(clean, "[") || strings.HasPrefix(clean, "{") {
+	clean := strings.TrimSpace(stripMetaLines(strings.TrimPrefix(content, "\uFEFF")))
+	if clean == "" {
+		return nil, nil
+	}
+
+	if clean[0] == '[' {
 		var xrayConfigs []XrayConfig
 		if err := json.Unmarshal([]byte(clean), &xrayConfigs); err == nil {
 			var uris []string
-			for _, c := range xrayConfigs { uris = append(uris, extractFromXray(c)...) }
-			if len(uris) > 0 { return uris, xrayConfigs }
+			for _, cfg := range xrayConfigs {
+				uris = append(uris, extractFromXray(cfg)...)
+			}
+			if len(uris) > 0 {
+				return uris, xrayConfigs
+			}
 		}
-		var xrayConfig XrayConfig
-		if err := json.Unmarshal([]byte(clean), &xrayConfig); err == nil && len(xrayConfig.Outbounds) > 0 {
-			return extractFromXray(xrayConfig), xrayConfig
-		}
-		var singboxConfig SingBoxConfig
-		if err := json.Unmarshal([]byte(clean), &singboxConfig); err == nil && len(singboxConfig.Outbounds) > 0 {
-			return extractFromSingBox(singboxConfig), singboxConfig
+		var singConfigs []SingBoxConfig
+		if err := json.Unmarshal([]byte(clean), &singConfigs); err == nil {
+			var uris []string
+			for _, cfg := range singConfigs {
+				uris = append(uris, extractFromSingBox(cfg)...)
+			}
+			if len(uris) > 0 {
+				return uris, singConfigs
+			}
 		}
 	}
-	var clashConfig ClashConfig
-	if err := yaml.Unmarshal([]byte(clean), &clashConfig); err == nil && len(clashConfig.Proxies) > 0 {
-		return extractFromClash(clashConfig), clashConfig
+
+	if clean[0] == '{' {
+		var envelope struct {
+			Outbounds []json.RawMessage `json:"outbounds"`
+		}
+		if err := json.Unmarshal([]byte(clean), &envelope); err == nil && len(envelope.Outbounds) > 0 {
+			var jsonKind string
+			for _, rawOutbound := range envelope.Outbounds {
+				var kind struct {
+					Protocol string `json:"protocol"`
+					Type     string `json:"type"`
+				}
+				if json.Unmarshal(rawOutbound, &kind) != nil {
+					continue
+				}
+				if kind.Protocol != "" {
+					jsonKind = "xray"
+					break
+				}
+				if kind.Type != "" {
+					jsonKind = "singbox"
+					break
+				}
+			}
+			switch jsonKind {
+			case "xray":
+				var cfg XrayConfig
+				if json.Unmarshal([]byte(clean), &cfg) == nil {
+					return extractFromXray(cfg), cfg
+				}
+			case "singbox":
+				var cfg SingBoxConfig
+				if json.Unmarshal([]byte(clean), &cfg) == nil {
+					return extractFromSingBox(cfg), cfg
+				}
+			}
+		}
+	}
+
+	var clash ClashConfig
+	if err := yaml.Unmarshal([]byte(clean), &clash); err == nil && len(clash.Proxies) > 0 {
+		return extractFromClash(clash), clash
 	}
 	return extractFromB64OrText(content), nil
 }
 
-// ==========================================
-// СЕТЕВЫЕ И ГЕО-ФУНКЦИИ
-// ==========================================
+// ===============================
+// Разбор URI, DNS и TCP-проверка
+// ===============================
 
-func checkTCP(uri string) bool {
-	at := strings.Index(uri, "@")
-	if at == -1 { return false }
-	hostPort := uri[at+1:]
-	if slash := strings.IndexAny(hostPort, "/?#"); slash != -1 { hostPort = hostPort[:slash] }
-	colon := strings.LastIndex(hostPort, ":")
-	if colon == -1 { return false }
-	host, port := hostPort[:colon], hostPort[colon+1:]
-	host = strings.TrimPrefix(host, "[")
-	host = strings.TrimSuffix(host, "]")
-	if host == "" || port == "" { return false }
-
-	ip := host
-	if net.ParseIP(host) == nil {
-		if cached, ok := ipCache.Load(host); ok {
-			ip = cached.(string)
-			if ip == "" { return false }
-		} else {
-			ips, err := net.LookupIP(host)
-			if err != nil || len(ips) == 0 {
-				ipCache.Store(host, "")
-				return false
-			}
-			ip = ips[0].String()
-			ipCache.Store(host, ip)
-		}
-	}
-	conn, err := net.DialTimeout("tcp", net.JoinHostPort(ip, port), 2500*time.Millisecond)
-	if err != nil { return false }
-	conn.Close()
-	return true
+type endpoint struct {
+	URI    string
+	Scheme string
+	Host   string
+	Port   string
 }
 
-func processGeoIP(uri string) string {
-	at := strings.Index(uri, "@")
-	if at == -1 { return uri }
-	hostPort := uri[at+1:]
-	if slash := strings.IndexAny(hostPort, "/?#"); slash != -1 { hostPort = hostPort[:slash] }
-	colon := strings.LastIndex(hostPort, ":")
-	if colon == -1 { return uri }
-	host, port := hostPort[:colon], hostPort[colon+1:]
-	host = strings.TrimPrefix(host, "[")
-	host = strings.TrimSuffix(host, "]")
+type configEntry struct {
+	URI      string
+	Endpoint endpoint
+}
 
-	ip := host
-	if net.ParseIP(host) == nil {
-		if cached, ok := ipCache.Load(host); ok { ip = cached.(string) }
+func parseEndpoint(uri string) (endpoint, bool) {
+	u, err := url.Parse(uri)
+	if err != nil || u.Scheme == "" || u.Hostname() == "" || u.Port() == "" {
+		return endpoint{}, false
 	}
-	
-	baseUri := uri
-	if idx := strings.Index(uri, "#"); idx != -1 { baseUri = uri[:idx] }
-
-	if geoDb == nil || ip == "" {
-		return fmt.Sprintf("%s#%s", baseUri, encodeName("Unknown | "+strings.ToUpper(uri[:strings.Index(uri, "://")])+" | "+host+":"+port))
+	scheme := strings.ToLower(u.Scheme)
+	switch scheme {
+	case "vless", "trojan", "hysteria2", "hy2":
+	default:
+		return endpoint{}, false
 	}
-	record, err := geoDb.Country(net.ParseIP(ip))
-	if err != nil || record.Country.IsoCode == "" {
-		return fmt.Sprintf("%s#%s", baseUri, encodeName("Unknown | "+strings.ToUpper(uri[:strings.Index(uri, "://")])+" | "+host+":"+port))
+	port, err := strconv.Atoi(u.Port())
+	if err != nil || port < 1 || port > 65535 {
+		return endpoint{}, false
 	}
-	iso := record.Country.IsoCode
-	country := record.Country.Names["en"]
-	flag := string(rune(iso[0])+127397) + string(rune(iso[1])+127397)
-	name := fmt.Sprintf("%s %s | %s | %s:%s", flag, country, strings.ToUpper(uri[:strings.Index(uri, "://")]), host, port)
-	return fmt.Sprintf("%s#%s", baseUri, encodeName(name))
+	return endpoint{URI: uri, Scheme: scheme, Host: u.Hostname(), Port: strconv.Itoa(port)}, true
 }
 
 func getFingerprint(uri string) string {
-	if hashIdx := strings.Index(uri, "#"); hashIdx != -1 { uri = uri[:hashIdx] }
-	qIdx := strings.Index(uri, "?")
-	if qIdx == -1 { return uri }
-	mainPart := uri[:qIdx]
-	query := uri[qIdx+1:]
-	parts := strings.Split(query, "&")
+	if i := strings.IndexByte(uri, '#'); i >= 0 {
+		uri = uri[:i]
+	}
+	q := strings.IndexByte(uri, '?')
+	if q < 0 {
+		return uri
+	}
+	parts := strings.Split(uri[q+1:], "&")
 	sort.Strings(parts)
-	return mainPart + "?" + strings.Join(parts, "&")
+	return uri[:q+1] + strings.Join(parts, "&")
 }
 
-// ==========================================
-// ГЛАВНАЯ ФУНКЦИЯ
-// ==========================================
+func filterAndDedupe(uris []string) []configEntry {
+	if len(uris) == 0 {
+		return nil
+	}
+	seen := make(map[string]struct{}, len(uris))
+	out := make([]configEntry, 0, len(uris))
+	for _, uri := range uris {
+		if !isTargetScheme(uri) {
+			continue
+		}
+		fp := getFingerprint(uri)
+		if _, exists := seen[fp]; exists {
+			continue
+		}
+		seen[fp] = struct{}{}
+		ep, ok := parseEndpoint(uri)
+		if !ok {
+			continue
+		}
+		out = append(out, configEntry{URI: uri, Endpoint: ep})
+	}
+	return out
+}
 
-func determineName(resp *http.Response, body string, urlStr string, parsedRoot interface{}) string {
-	if t := resp.Header.Get("profile-title"); t != "" { return sanitizeFilename(t) }
-	re := regexp.MustCompile(`(?mi)^#\s*profile-title:\s*(.+)$`)
-	if m := re.FindStringSubmatch(body); len(m) > 1 { return sanitizeFilename(m[1]) }
-	
-	if configs, ok := parsedRoot.([]XrayConfig); ok {
-		for _, c := range configs {
-			if c.Remarks != "" { return sanitizeFilename(c.Remarks) }
-			for _, ob := range c.Outbounds {
-				if ob.Tag != "" && ob.Protocol != "freedom" && ob.Protocol != "blackhole" && ob.Protocol != "dns" { return sanitizeFilename(ob.Tag) }
+type dnsRecord struct {
+	once sync.Once
+	ips  []net.IP
+	err  error
+}
+
+func resolveHost(host string) *dnsRecord {
+	value, _ := dnsCache.LoadOrStore(host, &dnsRecord{})
+	record := value.(*dnsRecord)
+	record.once.Do(func() {
+		if ip := net.ParseIP(host); ip != nil {
+			record.ips = []net.IP{ip}
+			return
+		}
+		ctx, cancel := context.WithTimeout(context.Background(), dnsTimeout)
+		defer cancel()
+		record.ips, record.err = net.DefaultResolver.LookupIP(ctx, "ip", host)
+	})
+	return record
+}
+
+type probeResult struct {
+	Keep       bool // оставлять ли конфиг в итоговом файле
+	CheckedTCP bool
+	AliveTCP   bool
+	Latency    time.Duration
+	IP         string
+}
+
+func probe(ep endpoint) probeResult {
+	dns := resolveHost(ep.Host)
+	result := probeResult{}
+	if len(dns.ips) > 0 {
+		result.IP = dns.ips[0].String()
+	}
+
+	// Hysteria2 использует UDP/QUIC. TCP connect к его порту не является
+	// проверкой работоспособности, поэтому сохраняем запись без TCP-вердикта.
+	if ep.Scheme == "hysteria2" || ep.Scheme == "hy2" {
+		result.Keep = true
+		return result
+	}
+	result.CheckedTCP = true
+	if dns.err != nil || len(dns.ips) == 0 {
+		return result
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), tcpTimeout)
+	defer cancel()
+	start := time.Now()
+	dialer := net.Dialer{KeepAlive: -1}
+	for _, ip := range dns.ips {
+		address := net.JoinHostPort(ip.String(), ep.Port)
+		conn, err := dialer.DialContext(ctx, "tcp", address)
+		if err == nil {
+			result.Latency = time.Since(start)
+			if remote, ok := conn.RemoteAddr().(*net.TCPAddr); ok && remote.IP != nil {
+				result.IP = remote.IP.String()
+			}
+			_ = conn.Close()
+			result.Keep = true
+			result.AliveTCP = true
+			return result
+		}
+		if ctx.Err() != nil {
+			break
+		}
+	}
+	result.Latency = time.Since(start)
+	return result
+}
+
+// ===============================
+// GeoIP и имя выходного файла
+// ===============================
+
+func processGeoIP(uri string, ep endpoint, ip string) string {
+	baseURI := uri
+	if i := strings.IndexByte(baseURI, '#'); i >= 0 {
+		baseURI = baseURI[:i]
+	}
+
+	protocol := strings.ToUpper(ep.Scheme)
+	hostPort := net.JoinHostPort(ep.Host, ep.Port)
+	name := "Unknown | " + protocol + " | " + hostPort
+	if geoDb != nil && ip != "" {
+		if record, err := geoDb.Country(net.ParseIP(ip)); err == nil {
+			iso := record.Country.IsoCode
+			if len(iso) == 2 {
+				country := record.Country.Names["en"]
+				if country == "" {
+					country = iso
+				}
+				flag := string(rune(iso[0])+127397) + string(rune(iso[1])+127397)
+				name = flag + " " + country + " | " + protocol + " | " + hostPort
 			}
 		}
 	}
-	if cfg, ok := parsedRoot.(XrayConfig); ok {
+	return baseURI + "#" + encodeName(name)
+}
+
+func determineName(resp *http.Response, body, sourceURL string, parsedRoot interface{}) string {
+	if title := resp.Header.Get("profile-title"); title != "" {
+		return sanitizeFilename(title)
+	}
+	if match := profileTitleRE.FindStringSubmatch(body); len(match) > 1 {
+		return sanitizeFilename(match[1])
+	}
+
+	validTag := func(tag, protocol string) bool {
+		switch strings.ToLower(protocol) {
+		case "freedom", "blackhole", "dns":
+			return false
+		default:
+			return tag != ""
+		}
+	}
+	findXray := func(cfg XrayConfig) string {
+		if cfg.Remarks != "" {
+			return cfg.Remarks
+		}
 		for _, ob := range cfg.Outbounds {
-			if ob.Tag != "" && ob.Protocol != "freedom" && ob.Protocol != "blackhole" && ob.Protocol != "dns" { return sanitizeFilename(ob.Tag) }
+			if validTag(ob.Tag, ob.Protocol) {
+				return ob.Tag
+			}
+		}
+		return ""
+	}
+
+	switch cfg := parsedRoot.(type) {
+	case []XrayConfig:
+		for _, c := range cfg {
+			if n := findXray(c); n != "" {
+				return sanitizeFilename(n)
+			}
+		}
+	case XrayConfig:
+		if n := findXray(cfg); n != "" {
+			return sanitizeFilename(n)
+		}
+	case SingBoxConfig:
+		for _, ob := range cfg.Outbounds {
+			if ob.Tag != "" {
+				return sanitizeFilename(ob.Tag)
+			}
+		}
+	case []SingBoxConfig:
+		for _, c := range cfg {
+			for _, ob := range c.Outbounds {
+				if ob.Tag != "" {
+					return sanitizeFilename(ob.Tag)
+				}
+			}
+		}
+	case ClashConfig:
+		for _, p := range cfg.Proxies {
+			if p.Name != "" {
+				return sanitizeFilename(p.Name)
+			}
 		}
 	}
-	if a := resp.Header.Get("profile-web-page-url"); a != "" {
-		if u, err := url.Parse(a); err == nil {
+
+	if pageURL := resp.Header.Get("profile-web-page-url"); pageURL != "" {
+		if u, err := url.Parse(pageURL); err == nil {
 			parts := strings.Split(strings.Trim(u.Path, "/"), "/")
-			if len(parts) > 0 && parts[len(parts)-1] != "" { return sanitizeFilename(parts[len(parts)-1]) }
-			return sanitizeFilename(u.Host)
+			if len(parts) > 0 && parts[len(parts)-1] != "" {
+				return sanitizeFilename(parts[len(parts)-1])
+			}
+			if u.Host != "" {
+				return sanitizeFilename(u.Host)
+			}
 		}
 	}
-	u, _ := url.Parse(urlStr)
+	u, err := url.Parse(sourceURL)
+	if err != nil {
+		return "unnamed"
+	}
 	return sanitizeFilename(u.Host + strings.ReplaceAll(u.Path, "/", "_"))
 }
 
-func processSource(urlStr string) {
-	fmt.Printf("\n[*] Source: %s\n", urlStr)
-	client := &http.Client{Timeout: 30 * time.Second}
-	req, _ := http.NewRequest("GET", urlStr, nil)
-	req.Header.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-	resp, err := client.Do(req)
+// ===============================
+// Параллельная загрузка источников
+// ===============================
+
+type sourceResult struct {
+	URL     string
+	Name    string
+	Entries []configEntry
+	Err     error
+}
+
+func fetchAndParse(sourceURL string) sourceResult {
+	result := sourceResult{URL: sourceURL}
+	req, err := http.NewRequest(http.MethodGet, sourceURL, nil)
 	if err != nil {
-		fmt.Printf("    [!] Error: %v\n", err)
-		return
+		result.Err = err
+		return result
+	}
+	req.Header.Set("User-Agent", "Mozilla/5.0 (compatible; GoSubscriptionChecker/2.0)")
+
+	resp, err := httpClient.Do(req)
+	if err != nil {
+		result.Err = err
+		return result
 	}
 	defer resp.Body.Close()
-	
-	bodyBytes, _ := io.ReadAll(resp.Body)
-	bodyStr := string(bodyBytes)
-	uris, parsedRoot := extractURIs(bodyStr)
-	name := determineName(resp, bodyStr, urlStr, parsedRoot)
-	fmt.Printf("    [i] Filename: %s.txt\n", name)
-	
-	if len(uris) == 0 {
-		fmt.Println("    [-] No configs found.")
-		return
+	if resp.StatusCode < 200 || resp.StatusCode >= 300 {
+		result.Err = fmt.Errorf("HTTP %s", resp.Status)
+		return result
 	}
-	
-	var filtered []string
-	for _, u := range uris {
-		scheme := u
-		if idx := strings.Index(u, "://"); idx != -1 { scheme = u[:idx] }
-		if targetSchemes[strings.ToLower(scheme)] { filtered = append(filtered, u) }
+
+	body, err := io.ReadAll(io.LimitReader(resp.Body, maxSourceSize+1))
+	if err != nil {
+		result.Err = err
+		return result
 	}
-	if len(filtered) == 0 {
-		fmt.Println("    [-] Empty after scheme filter.")
-		return
+	if len(body) > maxSourceSize {
+		result.Err = fmt.Errorf("source exceeds %d MiB", maxSourceSize>>20)
+		return result
 	}
-	
-	seen := make(map[string]bool)
-	var deduped []string
-	for _, u := range filtered {
-		fp := getFingerprint(u)
-		if !seen[fp] { seen[fp] = true; deduped = append(deduped, u) }
+	bodyText := string(body)
+	uris, parsedRoot := extractURIs(bodyText)
+	result.Name = determineName(resp, bodyText, sourceURL, parsedRoot)
+	result.Entries = filterAndDedupe(uris)
+	return result
+}
+
+func fetchAllSources() []sourceResult {
+	results := make([]sourceResult, len(sources))
+	workers := fetchWorkers
+	if workers > len(sources) {
+		workers = len(sources)
 	}
-	fmt.Printf("    [~] Unique configs: %d\n", len(deduped))
-	
-	fmt.Printf("    [~] Checking TCP availability (Go engine)...\n")
-	alive := make([]string, 0, len(deduped))
-	var mu sync.Mutex
-	sem := make(chan struct{}, 1000) 
+	if workers == 0 {
+		return results
+	}
+
+	jobs := make(chan int)
 	var wg sync.WaitGroup
-	
-	for _, u := range deduped {
-		wg.Add(1)
-		go func(uri string) {
+	wg.Add(workers)
+	for w := 0; w < workers; w++ {
+		go func() {
 			defer wg.Done()
-			sem <- struct{}{}
-			defer func() { <-sem }()
-			if checkTCP(uri) {
-				mu.Lock()
-				alive = append(alive, uri)
-				mu.Unlock()
+			for i := range jobs {
+				results[i] = fetchAndParse(sources[i])
 			}
-		}(u)
+		}()
 	}
+	for i := range sources {
+		jobs <- i
+	}
+	close(jobs)
 	wg.Wait()
-	
-	fmt.Printf("    [~] Alive servers: %d / %d\n", len(alive), len(deduped))
-	if len(alive) == 0 {
-		fmt.Println("    [-] All servers dead.")
+	return results
+}
+
+// Все TCP-задачи используют один фиксированный пул. Количество горутин не
+// растёт пропорционально числу конфигураций.
+func checkAllSources(results []sourceResult) [][]probeResult {
+	checks := make([][]probeResult, len(results))
+	total := 0
+	for i := range results {
+		checks[i] = make([]probeResult, len(results[i].Entries))
+		total += len(results[i].Entries)
+	}
+	if total == 0 {
+		return checks
+	}
+
+	workers := tcpWorkers
+	if workers > total {
+		workers = total
+	}
+	type job struct{ source, index int }
+	jobs := make(chan job, workers*2)
+	var wg sync.WaitGroup
+	wg.Add(workers)
+	for w := 0; w < workers; w++ {
+		go func() {
+			defer wg.Done()
+			for j := range jobs {
+				checks[j.source][j.index] = probe(results[j.source].Entries[j.index].Endpoint)
+			}
+		}()
+	}
+	for i := range results {
+		for j := range results[i].Entries {
+			jobs <- job{source: i, index: j}
+		}
+	}
+	close(jobs)
+	wg.Wait()
+	return checks
+}
+
+func writeSourceResult(source sourceResult, checks []probeResult) {
+	fmt.Printf("\n[*] Source: %s\n", source.URL)
+	if source.Err != nil {
+		fmt.Printf("    [!] Error: %v\n", source.Err)
 		return
 	}
-	
-	var finalURIs []string
-	for _, u := range alive { finalURIs = append(finalURIs, processGeoIP(u)) }
+	fmt.Printf("    [i] Filename: %s.txt\n", source.Name)
+	if len(source.Entries) == 0 {
+		fmt.Println("    [-] No valid configs found.")
+		return
+	}
+
+	var tcpAlive, tcpChecked, udpSkipped int
+	latencies := make([]time.Duration, 0, len(source.Entries))
+	finalURIs := make([]string, 0, len(source.Entries))
+	for i, entry := range source.Entries {
+		check := checks[i]
+		if check.CheckedTCP {
+			tcpChecked++
+			if !check.AliveTCP {
+				continue
+			}
+			tcpAlive++
+			latencies = append(latencies, check.Latency)
+		} else {
+			udpSkipped++
+		}
+		finalURIs = append(finalURIs, processGeoIP(entry.URI, entry.Endpoint, check.IP))
+	}
+	fmt.Printf("    [~] Unique configs: %d\n", len(source.Entries))
+	fmt.Printf("    [~] TCP alive: %d / %d; Hysteria2 skipped (UDP/QUIC): %d\n", tcpAlive, tcpChecked, udpSkipped)
+	if len(latencies) > 0 {
+		sort.Slice(latencies, func(i, j int) bool { return latencies[i] < latencies[j] })
+		var sum time.Duration
+		for _, latency := range latencies {
+			sum += latency
+		}
+		fmt.Printf("    [~] TCP connect latency: min %s | median %s | avg %s\n",
+			latencies[0].Round(time.Microsecond),
+			latencies[len(latencies)/2].Round(time.Microsecond),
+			(sum / time.Duration(len(latencies))).Round(time.Microsecond))
+	}
+	if len(finalURIs) == 0 {
+		fmt.Println("    [-] No TCP servers responded.")
+		return
+	}
 	sort.Strings(finalURIs)
-	
-	os.MkdirAll("subscriptions", 0755)
-	path := filepath.Join("subscriptions", name+".txt")
-	file, _ := os.Create(path)
-	defer file.Close()
-	for _, u := range finalURIs { file.WriteString(u + "\n") }
+	if err := os.MkdirAll("subscriptions", 0755); err != nil {
+		fmt.Printf("    [!] Cannot create output directory: %v\n", err)
+		return
+	}
+	path := filepath.Join("subscriptions", source.Name+".txt")
+	file, err := os.Create(path)
+	if err != nil {
+		fmt.Printf("    [!] Cannot create %s: %v\n", path, err)
+		return
+	}
+	writer := bufio.NewWriterSize(file, 1<<20)
+	for _, uri := range finalURIs {
+		if _, err = writer.WriteString(uri + "\n"); err != nil {
+			break
+		}
+	}
+	if flushErr := writer.Flush(); err == nil {
+		err = flushErr
+	}
+	if closeErr := file.Close(); err == nil {
+		err = closeErr
+	}
+	if err != nil {
+		fmt.Printf("    [!] Write error: %v\n", err)
+		return
+	}
 	fmt.Printf("    [OK] Saved %d configs -> %s\n", len(finalURIs), path)
 }
 
@@ -696,7 +1141,19 @@ func main() {
 		defer geoDb.Close()
 	}
 
-	for _, urlStr := range sources {
-		processSource(urlStr)
+	started := time.Now()
+	fmt.Printf("[*] Fetching %d sources (workers: %d)...\n", len(sources), fetchWorkers)
+	results := fetchAllSources()
+
+	total := 0
+	for i := range results {
+		total += len(results[i].Entries)
 	}
+	fmt.Printf("[*] Parsed %d unique configs. Starting checks (workers: %d)...\n", total, tcpWorkers)
+	checks := checkAllSources(results)
+
+	for i := range results {
+		writeSourceResult(results[i], checks[i])
+	}
+	fmt.Printf("\n[OK] Finished in %s\n", time.Since(started).Round(time.Millisecond))
 }
