@@ -30,6 +30,7 @@ jobs:
 
       - name: Run Go Updater
         run: |
+          rm -rf subscriptions
           go mod init vpn-updater
           go get gopkg.in/yaml.v3 github.com/oschwald/geoip2-golang
           go run main.go
@@ -52,56 +53,63 @@ jobs:
         run: |
           # 1. Клонируем репозиторий Codeberg
           git clone "https://${CODEBERG_USER}:${CODEBERG_TOKEN}@codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}.git" /tmp/codeberg-mirror
-          
-          # 2. Копируем свежие файлы подписок
-          cp -r subscriptions/* /tmp/codeberg-mirror/
           cd /tmp/codeberg-mirror
           
-          # 3. Определяем текущую ветку (main или master)
+          # 2. Удаляем старые файлы ссылок из корня
+          rm -f raw_links.md
+          rm -f yandex_links.md
+          
+          # 3. Создаем папку Subscriptions и чистим в ней старые .txt
+          mkdir -p Subscriptions
+          rm -f Subscriptions/*.txt
+          
+          # 4. Копируем свежие подписки в папку Subscriptions
+          cp -r /github/workspace/subscriptions/* Subscriptions/
+          
+          # 5. Определяем текущую ветку и базовый URL
           BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          RAW_BASE="https://codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}/raw/branch/${BRANCH}/Subscriptions"
           
-          # 4. Формируем базовый URL для raw-ссылок Codeberg
-          RAW_BASE="https://codeberg.org/${CODEBERG_USER}/${CODEBERG_REPO}/raw/branch/${BRANCH}"
-          
-          # 5. Инициализируем файлы со ссылками
-          echo "# Ссылки через Яндекс Переводчик" > yandex_links.md
-          echo "" >> yandex_links.md
-          echo "Нажмите на нужную подписку, чтобы открыть её через Яндекс Переводчик." >> yandex_links.md
-          echo "" >> yandex_links.md
-          
-          echo "# Прямые raw-ссылки на Codeberg" > raw_links.md
+          # 6. Генерируем новые списки ссылок
+          echo "# Ссылки на подписки" > raw_links.md
           echo "" >> raw_links.md
-          echo "Копируйте эти ссылки для импорта в VPN-клиенты напрямую." >> raw_links.md
+          echo "Список всех собранных подписок с прямыми ссылками на Codeberg." >> raw_links.md
           echo "" >> raw_links.md
           
-          # 6. Генерируем ссылки для каждого файла
-          for file in *.txt; do
-            if [ -f "$file" ]; then
-              # Кодируем имя файла для ссылки (пробелы станут %20)
+          echo "# Подписки через Яндекс Переводчик" > yandex_links.md
+          echo "" >> yandex_links.md
+          echo "Используйте эти ссылки, если Codeberg заблокирован." >> yandex_links.md
+          echo "" >> yandex_links.md
+          
+          # 7. Проходимся по файлам внутри папки Subscriptions
+          for filepath in Subscriptions/*.txt; do
+            if [ -f "$filepath" ]; then
+              # Получаем только имя файла без пути
+              file=$(basename "$filepath")
+              
+              DISPLAY_NAME=$(python3 -c "import urllib.parse, sys; print(urllib.parse.unquote(sys.argv[1]))" "${file%.*}")
               ENCODED_FILE=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1]))" "$file")
               
-              # Собираем raw-ссылку
               RAW_URL="${RAW_BASE}/${ENCODED_FILE}"
-              
-              # Добавляем в файл raw_links.md
-              echo "- ${RAW_URL}" >> raw_links.md
-              
-              # --- Логика для Яндекс Переводчика ---
-              # Кодируем весь URL для параметра url=
               ENCODED_RAW_URL=$(python3 -c "import urllib.parse, sys; print(urllib.parse.quote(sys.argv[1], safe=''))" "$RAW_URL")
               YANDEX_URL="https://translate.yandex.ru/translate?url=${ENCODED_RAW_URL}"
               
-              # Декодируем имя файла для красивого отображения
-              DISPLAY_NAME=$(python3 -c "import urllib.parse, sys; print(urllib.parse.unquote(sys.argv[1]))" "$file")
+              echo "### $DISPLAY_NAME" >> raw_links.md
+              echo "- Прямая ссылка: \`${RAW_URL}\`" >> raw_links.md
+              echo "" >> raw_links.md
               
-              # Добавляем в файл yandex_links.md
-              echo "- [$DISPLAY_NAME]($YANDEX_URL)" >> yandex_links.md
+              echo "### $DISPLAY_NAME" >> yandex_links.md
+              echo "- [Открыть через Яндекс](${YANDEX_URL})" >> yandex_links.md
+              echo "- *Оригинальная ссылка*: \`${RAW_URL}\`" >> yandex_links.md
+              echo "" >> yandex_links.md
             fi
           done
           
-          # 7. Коммитим и пушим в Codeberg
+          # 8. Отправляем изменения
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .
+          git commit -m "Mirror update from GitHub" || echo "No changes"
+          git push origin ${BRANCH}
           git commit -m "Mirror update from GitHub" || echo "No changes"
           git push origin ${BRANCH}
