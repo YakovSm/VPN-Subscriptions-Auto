@@ -2,13 +2,13 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.52:443?type=tcp#%F0%9F%87%BA
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.214:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.214%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.224:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.224%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.131:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.131%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.19:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.19%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.211%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.67:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.67%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.193:443?type=tcp#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20193.108.119.193%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.208:443?type=tcp#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.208%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?type=tcp#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.29%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.155:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.155%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.85:443?type=tcp#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.85%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.158:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.158%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.176:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.176%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.54:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.54%3A443
@@ -66,6 +66,7 @@ vless://622654a4-b666-000b-9260-fb717e05154f@169.40.34.41:443?encryption=none&fp
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@87.248.149.50:443?encryption=none&security=tls&sni=base.hosamobenl.co.uk&type=tcp#%F0%9F%87%AE%F0%9F%87%B7%20Iran%20%7C%20VLESS%20%7C%2087.248.149.50%3A443
 vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?encryption=none&path=/vless&type=ws#%F0%9F%87%AE%F0%9F%87%B3%20India%20%7C%20VLESS%20%7C%2013.140.56.100%3A14430
 vless://7955bf18-35c4-412d-aabd-c0b36c793063@bhjolq0d0l.flowersgood.top:443?encryption=none&host=bhjolq0d0l.flowersgood.top&path=/service/telemetry/045d381f1166/&security=tls&sni=bhjolq0d0l.flowersgood.top&type=ws#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20bhjolq0d0l.flowersgood.top%3A443
+vless://7955bf18-35c4-412d-aabd-c0b36c793063@nguyxejonb.flowersgood.top:443?encryption=none&host=nguyxejonb.flowersgood.top&path=/service/telemetry/0294da469190/&security=tls&sni=nguyxejonb.flowersgood.top&type=ws#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20nguyxejonb.flowersgood.top%3A443
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:10574?encryption=none&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20VLESS%20%7C%203.0.111.82%3A10574
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:12972?encryption=none&fp=random&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20VLESS%20%7C%203.0.111.82%3A12972
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:17623?encryption=none&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20VLESS%20%7C%203.0.111.82%3A17623
