@@ -284,11 +284,15 @@ func makeURI(scheme, credential, host string, port int, params map[string]string
 }
 
 func sanitizeFilename(name string) string {
-	name = invalidFilenameRE.ReplaceAllString(name, "_")
-	name = strings.Trim(strings.TrimSpace(name), ".")
-	if name == "" {
-		return "unnamed"
-	}
+	name = strings.ReplaceAll(name, "https://", "")
+	name = strings.ReplaceAll(name, "http://", "")
+	name = strings.ReplaceAll(name, "t.me/", "")
+	name = strings.ReplaceAll(name, "www.", "")
+	name = fileNameReplacer.Replace(name)
+	name = strings.Join(strings.Fields(name), " ") // Убираем двойные пробелы
+	name = strings.TrimSpace(name)
+	name = strings.Trim(name, ".")
+	if name == "" { return "unnamed" }
 	return name
 }
 
