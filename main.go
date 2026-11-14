@@ -288,11 +288,13 @@ func sanitizeFilename(name string) string {
 	name = strings.ReplaceAll(name, "http://", "")
 	name = strings.ReplaceAll(name, "t.me/", "")
 	name = strings.ReplaceAll(name, "www.", "")
-	name = fileNameReplacer.Replace(name)
+	name = invalidFilenameRE.ReplaceAllString(name, "_")
 	name = strings.Join(strings.Fields(name), " ") // Убираем двойные пробелы
 	name = strings.TrimSpace(name)
 	name = strings.Trim(name, ".")
-	if name == "" { return "unnamed" }
+	if name == "" {
+		return "unnamed"
+	}
 	return name
 }
 
@@ -1060,13 +1062,18 @@ func checkAllSources(results []sourceResult) [][]probeResult {
 	return checks
 }
 
-func writeSourceResult(source sourceResult, checks []probeResult) {
+// Добавлен аргумент index int для порядкового номера файла
+func writeSourceResult(source sourceResult, checks []probeResult, index int) {
 	fmt.Printf("\n[*] Source: %s\n", source.URL)
 	if source.Err != nil {
 		fmt.Printf("    [!] Error: %v\n", source.Err)
 		return
 	}
-	fmt.Printf("    [i] Filename: %s.txt\n", source.Name)
+	
+	// Формируем имя с префиксом (001_, 002_ и т.д.)
+	prefixedName := fmt.Sprintf("%03d_%s", index+1, source.Name)
+	
+	fmt.Printf("    [i] Filename: %s.txt\n", prefixedName)
 	if len(source.Entries) == 0 {
 		fmt.Println("    [-] No valid configs found.")
 		return
@@ -1111,7 +1118,9 @@ func writeSourceResult(source sourceResult, checks []probeResult) {
 		fmt.Printf("    [!] Cannot create output directory: %v\n", err)
 		return
 	}
-	path := filepath.Join("subscriptions", source.Name+".txt")
+	
+	// Используем имя с префиксом для сохранения
+	path := filepath.Join("subscriptions", prefixedName+".txt")
 	file, err := os.Create(path)
 	if err != nil {
 		fmt.Printf("    [!] Cannot create %s: %v\n", path, err)
@@ -1157,7 +1166,8 @@ func main() {
 	checks := checkAllSources(results)
 
 	for i := range results {
-		writeSourceResult(results[i], checks[i])
+		// Передаем индекс i в функцию записи
+		writeSourceResult(results[i], checks[i], i)
 	}
 	fmt.Printf("\n[OK] Finished in %s\n", time.Since(started).Round(time.Millisecond))
 }
