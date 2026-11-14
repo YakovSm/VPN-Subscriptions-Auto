@@ -11,7 +11,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.29:443?type=tcp#%F0%9F%87%A8
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.106.186.155:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.155%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.85:443?type=tcp#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.85%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.158:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.158%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.176:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.176%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.54:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.54%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.59:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.59%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.156.212%3A443
@@ -35,6 +34,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?type=tcp#%F0%9F%87%
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.25:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.25%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.46:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.46%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.81:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.81%3A443
+trojan://242a3d8eee5e4ed1a6bfa4141d549a25@216.106.186.66:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.66%3A443
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.32:443?type=tcp#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20%7C%20TROJAN%20%7C%2095.143.196.32%3A443
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.97:443?type=tcp#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20%7C%20TROJAN%20%7C%2095.143.196.97%3A443
 trojan://dba20dcb635e430fa4d3bfc303a149d2@216.106.186.32:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.32%3A443
@@ -47,6 +47,7 @@ vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.148:443?encryption=none&
 vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.151:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=edge.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2089.105.195.151%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@app.mediacorphub.org:443?encryption=none&security=tls&serviceName=stats.v2.StreamService&sni=app.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20app.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@assets.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=assets.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20assets.mediacorphub.org%3A443
+vless://1653818d-532e-46be-b825-384107fb7c3a@edge.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=edge.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20edge.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@get.mediacorphub.org:443?encryption=none&security=tls&serviceName=gw.v2.PushService&sni=get.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20get.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@hub.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=hub.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20hub.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@images.mediacorphub.org:443?encryption=none&security=tls&serviceName=stats.v2.StreamService&sni=images.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20images.mediacorphub.org%3A443
