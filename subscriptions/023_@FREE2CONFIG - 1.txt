@@ -1,6 +1,5 @@
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.52:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20167.88.61.52%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.214:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.214%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.224:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.224%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.131:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.131%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.19:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.19%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.211%3A443
@@ -48,7 +47,6 @@ vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.148:443?encryption=none&
 vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.151:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=edge.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2089.105.195.151%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@app.mediacorphub.org:443?encryption=none&security=tls&serviceName=stats.v2.StreamService&sni=app.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20app.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@assets.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=assets.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20assets.mediacorphub.org%3A443
-vless://1653818d-532e-46be-b825-384107fb7c3a@edge.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=edge.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20edge.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@get.mediacorphub.org:443?encryption=none&security=tls&serviceName=gw.v2.PushService&sni=get.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20get.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@hub.mediacorphub.org:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=hub.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20hub.mediacorphub.org%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@images.mediacorphub.org:443?encryption=none&security=tls&serviceName=stats.v2.StreamService&sni=images.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20images.mediacorphub.org%3A443
