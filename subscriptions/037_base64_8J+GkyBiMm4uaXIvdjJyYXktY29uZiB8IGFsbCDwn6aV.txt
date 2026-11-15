@@ -66,7 +66,6 @@ trojan://b640d791-ff83-4300-b509-c2a02f97f167@51.38.71.175:80?security=tls&sni=u
 trojan://b640d791-ff83-4300-b509-c2a02f97f167@uk1.trojanvh.xyz:80?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20uk1.trojanvh.xyz%3A80
 trojan://b7795ce8-3863-4292-adfc-9c0a7b847774@t2w2t2w2.bpca2026.top:443?security=tls&sni=t2w2t2w2.bpca2026.top#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20t2w2t2w2.bpca2026.top%3A443
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?security=tls&sni=hk.catxstar.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-01.catcat321.com%3A20103
-trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-b1.catcat321.com:20051?security=tls&sni=hk.catxstar.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-b1.catcat321.com%3A20051
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?security=tls&sni=hk.catxstar.com#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20sclass-00.catcat321.com%3A20123
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c1.catcat321.com:20086?security=tls#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20sclass-c1.catcat321.com%3A20086
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-c2.catcat321.com:20051?security=tls&sni=hk.catxstar.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-c2.catcat321.com%3A20051
