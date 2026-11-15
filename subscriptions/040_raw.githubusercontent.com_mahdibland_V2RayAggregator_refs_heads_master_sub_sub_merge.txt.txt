@@ -15,7 +15,6 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.74:443?security=tls#%F0%9F
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.79:443?security=tls&sni=blog.connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.79%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.93:443?security=tls#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.93%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.93:443?security=tls&sni=connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.93%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.238.104.154:443?security=tls&sni=findtemporaryworkandfreelancerprojectsonlineplatform.com#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%20%7C%20TROJAN%20%7C%20216.238.104.154%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?security=tls&sni=connectwithemployerstohireyouridealteam.com#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%2045.63.30.142%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?security=tls&sni=advanceyouremploymentskillsandcareerdevelopmenthub.com#%F0%9F%87%A8%F0%9F%87%B1%20Chile%20%7C%20TROJAN%20%7C%2064.176.7.205%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&sni=www.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.121%3A443
@@ -110,6 +109,7 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kiev.ua:2
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kyiv.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kyiv.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odesa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odesa.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odessa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odessa.ua%3A2053
+trojan://98b419ef-83a2-4d1b-a23d-566b7f24477b@bbbnnmj.131.pp.ua:443?security=tls#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20TROJAN%20%7C%20bbbnnmj.131.pp.ua%3A443
 trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20119.246.1.143%3A443
 trojan://Cl150MQWlG@209.250.236.93:443?security=tls&sni=irancell-ir-4.mmdruby13.store&type=grpc#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20209.250.236.93%3A443
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.97:443?security=tls#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20%7C%20TROJAN%20%7C%2095.143.196.97%3A443
@@ -132,6 +132,7 @@ trojan://b17fa17d-13a0-4e8a-a398-8e549ea8b208@23.227.38.11:443?security=tls&sni=
 trojan://b26e31e5-eac1-45b0-9069-83830bd69521@20.187.85.198:443?security=tls&sni=hkt.iamnotagoodman.com#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%2020.187.85.198%3A443
 trojan://b640d791-ff83-4300-b509-c2a02f97f167@51.38.71.175:80?security=tls&sni=uk1.trojanvh.xyz#%F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%20%7C%20TROJAN%20%7C%2051.38.71.175%3A80
 trojan://b640d791-ff83-4300-b509-c2a02f97f167@uk1.trojanvh.xyz:80?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20uk1.trojanvh.xyz%3A80
+trojan://b7795ce8-3863-4292-adfc-9c0a7b847774@t2w2t2w2.bpca2026.top:443?security=tls&sni=t2w2t2w2.bpca2026.top#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20t2w2t2w2.bpca2026.top%3A443
 trojan://b8808043-6566-4923-9195-e66bfb553d57@51.38.99.96:443?security=tls&sni=ba24.ir#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20TROJAN%20%7C%2051.38.99.96%3A443
 trojan://c0fde6ac-a07c-4f60-84ae-e7ed4da78a6f@15.204.210.176:80?security=tls&sni=15.204.210.176#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2015.204.210.176%3A80
 trojan://c0fde6ac-a07c-4f60-84ae-e7ed4da78a6f@15.204.210.176:80?security=tls&sni=telewebion.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2015.204.210.176%3A80
