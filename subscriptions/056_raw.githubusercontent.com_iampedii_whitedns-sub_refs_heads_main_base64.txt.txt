@@ -2,8 +2,7 @@ hysteria2://4afd4e1b1b0edd429b10d800a1cf64a7@47.89.232.46:8443?insecure=1&sni=hy
 hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=vk.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2051.15.19.206%3A8443
 hysteria2://Yuike2026cat@43.130.234.128:8443?sni=43-130-234-128.sslip.io#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20HYSTERIA2%20%7C%2043.130.234.128%3A8443
 hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20HYSTERIA2%20%7C%2062.210.124.146%3A22000
-trojan://Z5lvhmLqSc@173.234.15.84:48994?sni=m.microsoft.com&allowInsecure=1&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20173.234.15.84%3A48994
-trojan://Z5lvhmLqSc@173.234.15.84:48994?sni=m.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20173.234.15.84%3A48994
+trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 vless://0386df1b-7abd-4676-f3c6-d65d691023b9@sino.bestsellers1.site:2083?security=tls&type=ws&path=%2F&host=sino.bestsellers1.site&sni=sino.bestsellers1.site&fp=chrome#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20VLESS%20%7C%20sino.bestsellers1.site%3A2083
 vless://254f28cb-d0c1-41e9-a06b-f2155213ff04@ams2.shtil.io:444?security=tls&type=tcp&alpn=h2%2Chttp%2F1.1&sni=ams2.shtil.io&fp=safari&flow=xtls-rprx-vision#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20ams2.shtil.io%3A444
 vless://254f28cb-d0c1-41e9-a06b-f2155213ff04@ams2.shtil.io:444?security=tls&type=tcp&packetEncoding=none&allowInsecure=1&sni=ams2.shtil.io&fp=firefox&flow=xtls-rprx-vision#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20ams2.shtil.io%3A444
