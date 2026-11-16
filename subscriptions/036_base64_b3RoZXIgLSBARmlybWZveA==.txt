@@ -116,7 +116,7 @@ hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333/?insecure
 hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@155.248.209.237:33333?insecure=1&sni=155.248.209.237#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20155.248.209.237%3A33333
 hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@hy2.123266.xyz:33333/?sni=hy2.123266.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20hy2.123266.xyz%3A33333
 hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@hy2.123266.xyz:33333?sni=hy2.123266.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20hy2.123266.xyz%3A33333
-hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?security=tls&obfs=salamander&obfs-password=km9oqmefh2km1i5n&insecure=0&sni=panel.autonetshop.ir#Unknown%20%7C%20HYSTERIA2%20%7C%20panel.autonetshop.ir%3A43345
+hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?security=tls&obfs=salamander&obfs-password=km9oqmefh2km1i5n&insecure=0&sni=panel.autonetshop.ir#%F0%9F%87%B9%F0%9F%87%B7%20T%C3%BCrkiye%20%7C%20HYSTERIA2%20%7C%20panel.autonetshop.ir%3A43345
 hysteria2://dongtaiwang.com@142.249.37.90:44356/?sni=hy2.561891.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20142.249.37.90%3A44356
 hysteria2://dongtaiwang.com@142.249.37.90:44356?sni=hy2.561891.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20142.249.37.90%3A44356
 hysteria2://dongtaiwang.com@62.210.124.146:22000/?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20HYSTERIA2%20%7C%2062.210.124.146%3A22000
