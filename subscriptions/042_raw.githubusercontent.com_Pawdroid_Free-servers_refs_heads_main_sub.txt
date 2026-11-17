@@ -1,4 +1,4 @@
-trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?security=tls&sni=hk.catxstar.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20sclass-01.catcat321.com%3A20103
+trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?security=tls&sni=hk.catxstar.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-01.catcat321.com%3A20103
 vless://258ca28a-d982-4a40-b620-7c1c81108060@104.17.147.208:443?encryption=none&security=tls&type=ws&sni=b.rack.sxsc.dpdns.org#Unknown%20%7C%20VLESS%20%7C%20104.17.147.208%3A443
 vless://40af9131-d540-448a-bc56-5bba147a1dc3@103.116.7.67:2083?encryption=none&security=tls&sni=proxy-1cu.pages.dev&fp=random&type=ws&host=proxy-1cu.pages.dev&path=%2F#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20103.116.7.67%3A2083
 vless://40af9131-d540-448a-bc56-5bba147a1dc3@103.116.7.67:2083?encryption=none&security=tls&type=ws&sni=proxy-1cu.pages.dev#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20103.116.7.67%3A2083
