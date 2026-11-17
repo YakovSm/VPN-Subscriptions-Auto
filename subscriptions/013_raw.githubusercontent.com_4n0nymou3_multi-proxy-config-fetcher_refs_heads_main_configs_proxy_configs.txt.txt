@@ -71,6 +71,7 @@ hysteria2://umnDU7jgFYUjpVjVM2sW9HL0rRYLJNgzVwRu2HzWEhyZKkRx@hold.wwwinternetvid
 hysteria2://wrSuBorIlf@72.56.116.57:443?insecure=1&sni=hys9.wba-pn.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2072.56.116.57%3A443
 hysteria2://wrSuBorIlf@hys9.wba-pn.ru:443?insecure=1#Unknown%20%7C%20HYSTERIA2%20%7C%20hys9.wba-pn.ru%3A443
 hysteria2://zhangyang@130.61.50.75:6443?insecure=1&sni=130.61.50.75#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20HYSTERIA2%20%7C%20130.61.50.75%3A6443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?security=tls&sni=exploredigitaljobplatformandfindonlinework.com&path=/#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.184.127%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?security=tls&sni=connectgraduateswithjobopeningsandgrowprofessionally.com&path=/#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20TROJAN%20%7C%20158.247.253.243%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.52:443?security=tls&sni=courses.browseseniorrolesandenhanceyourcareertoday.com&path=/#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20167.88.61.52%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?security=tls&sni=api.explorecreativejobsandenhanceyourcareerportfolio.com&type=tcp&headerType=none#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.211%3A443
