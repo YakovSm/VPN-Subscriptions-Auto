@@ -14,7 +14,7 @@ hysteria2://2vwMMy8t5Sjl5lfK9dNF1OrU9d0K25V2RNWLbTKwJ6o@pixelcast.wwwinternetvid
 hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@212.34.137.105:443?sni=shorts.blog-forme.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%20212.34.137.105%3A443
 hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@94.183.164.119:24433?sni=lakes.blog-forme.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2094.183.164.119%3A24433
 hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@94.183.164.119:24433?sni=lakes.blog-forme.ru&fp=chrome#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2094.183.164.119%3A24433
-hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@guide.blog-forme.ru:443#Unknown%20%7C%20HYSTERIA2%20%7C%20guide.blog-forme.ru%3A443
+hysteria2://549766c3-fa5f-471e-8031-ffc1f8d5064f@guide.blog-forme.ru:443#%F0%9F%87%A8%F0%9F%87%BF%20Czechia%20%7C%20HYSTERIA2%20%7C%20guide.blog-forme.ru%3A443
 hysteria2://54d2f622-fd71-4f5f-8813-832b68f4ca3b@104.165.205.42:8443/?sni=speedtestmark.com#%F0%9F%87%B1%F0%9F%87%BB%20Latvia%20%7C%20HYSTERIA2%20%7C%20104.165.205.42%3A8443
 hysteria2://5ictxgawam84vgrp@109.70.74.213:2098?security=tls&obfs=salamander&obfs-password=7922smqtd5qm70fu&insecure=0&sni=109.70.74.213#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20HYSTERIA2%20%7C%20109.70.74.213%3A2098
 hysteria2://6aab8efdf13945829ae3699c342be406@31.76.80.69:443?security=tls&obfs=salamander&obfs-password=uw9b2qq5rx&insecure=0&sni=fiproxy1.lockdwn.com#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%2031.76.80.69%3A443
@@ -24,7 +24,7 @@ hysteria2://7e68e32f-8015-4f37-9082-70e8b0b58043@18.143.176.12:443?insecure=1&sn
 hysteria2://8674df07-56b3-43ea-b687-aef2b1a20137@31.76.22.210:443/?insecure=1&sni=crt.ultimagamest.com#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20HYSTERIA2%20%7C%2031.76.22.210%3A443
 hysteria2://8674df07-56b3-43ea-b687-aef2b1a20137@31.76.22.210:443?insecure=1&sni=crt.ultimagamest.com#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20HYSTERIA2%20%7C%2031.76.22.210%3A443
 hysteria2://9263c76e@37.123.193.151:4942?insecure=1&sni=www.bing.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%2037.123.193.151%3A4942
-hysteria2://99a271e85dbc4aa8950f9c7beee06b19@ide.vipvirtualnet.eu:30746?alpn=h3&fp=chrome&obfs=salamander&obfs-password=7wjvepshx5g115x4&security=tls&sni=del.vipvirtualnet.eu#%F0%9F%87%A6%F0%9F%87%AA%20United%20Arab%20Emirates%20%7C%20HYSTERIA2%20%7C%20ide.vipvirtualnet.eu%3A30746
+hysteria2://99a271e85dbc4aa8950f9c7beee06b19@ide.vipvirtualnet.eu:30746?alpn=h3&fp=chrome&obfs=salamander&obfs-password=7wjvepshx5g115x4&security=tls&sni=del.vipvirtualnet.eu#Unknown%20%7C%20HYSTERIA2%20%7C%20ide.vipvirtualnet.eu%3A30746
 hysteria2://99a271e85dbc4aa8950f9c7beee06b19@tgame.vipvirtualnet.eu:15066?alpn=h3&fp=chrome&obfs=salamander&obfs-password=sg4vykhxd2pzk94n&security=tls&sni=hxo.vipvirtualnet.eu#%F0%9F%87%AE%F0%9F%87%B7%20Iran%20%7C%20HYSTERIA2%20%7C%20tgame.vipvirtualnet.eu%3A15066
 hysteria2://AIcYjw5Oc9Rrrr9SGDUBbBIC@38.76.150.108:36712?sni=38.76.150.108&insecure=1#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%2038.76.150.108%3A36712
 hysteria2://BPvdjudCGodsF67hRP3xgBYvcKp48coTsh6ANydLhQs=@fin14qr.wwwinternetvideo.click:443/?insecure=1&sni=fin14qr.wwwinternetvideo.click#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%20fin14qr.wwwinternetvideo.click%3A443
