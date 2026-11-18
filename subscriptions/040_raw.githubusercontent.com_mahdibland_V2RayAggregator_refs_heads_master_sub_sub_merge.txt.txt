@@ -265,6 +265,7 @@ trojan://humanity@172.67.149.60:443?security=tls#Unknown%20%7C%20TROJAN%20%7C%20
 trojan://humanity@172.67.155.199:443?security=tls&sni=www.calmloud.com&type=ws&path=/assignment&Host=www.calmloud.com#Unknown%20%7C%20TROJAN%20%7C%20172.67.155.199%3A443
 trojan://humanity@172.67.74.2:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#Unknown%20%7C%20TROJAN%20%7C%20172.67.74.2%3A443
 trojan://humanity@173.242.51.189:443?security=tls&sni=www.cordweave.com#%F0%9F%87%BA%F0%9F%87%A6%20Ukraine%20%7C%20TROJAN%20%7C%20173.242.51.189%3A443
+trojan://humanity@179.255.132.69:443?security=tls&sni=www.cordweave.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20179.255.132.69%3A443
 trojan://humanity@185.18.250.245:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20185.18.250.245%3A443
 trojan://humanity@188.114.97.4:443?security=tls&sni=www.calmloud.com&type=ws&path=/assignment&Host=www.calmloud.com#Unknown%20%7C%20TROJAN%20%7C%20188.114.97.4%3A443
 trojan://humanity@198.62.62.23:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20198.62.62.23%3A443
