@@ -57,7 +57,7 @@ var (
 
 var sources = []string{
 	"https://raw.githubusercontent.com/Xumuk0/White-List-VPN/refs/heads/main/%D0%A0%D0%B5%D1%86%D0%B5%D0%BF%D1%82-%D0%9F%D0%B8%D1%80%D0%BE%D0%B3%D0%BE%D0%B2.txt",
-	"https://raw.githubusercontent.com/fifthidea/sub/refs/heads/main/sub/sub-full-plaintxt.txt",
+	"https://raw.githubusercontent.com/fifthidea/sub/refs/heads/main/channels/ConfigsHUB.txt",
 	"https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/WHITE-CIDR-RU-all.txt",
 	"https://raw.githubusercontent.com/solovyov-jenya2004/all_subs/refs/heads/main/final_sorted",
 	"https://raw.githubusercontent.com/svinakraft-maker/FlareFeed/refs/heads/main/public/podpiska.txt",
