@@ -19,6 +19,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?security=tls&sni=ww
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?security=tls&sni=blog.unlockyourfuturefindyourperfectcareer.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.13%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?security=tls#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.203%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?security=tls#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.244%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.40:443?security=tls#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.40%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?security=tls#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.215%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?security=tls&sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.225%3A443
 trojan://0b65bb06-6b28-487a-8e3c-820dda51e977@104.21.12.87:443?security=tls&sni=series-v1.samanehha.co&type=ws&path=/43xf5zgeApzDAfhOHq&Host=series-v1.samanehha.co#Unknown%20%7C%20TROJAN%20%7C%20104.21.12.87%3A443
@@ -95,7 +96,6 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.cn.u
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.co.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.co.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.com.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.com.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.dp.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.dp.ua%3A8443
-trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.if.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.if.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.ivano-frankivsk.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.ivano-frankivsk.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.kiev.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.kiev.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.kyiv.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.kyiv.ua%3A8443
