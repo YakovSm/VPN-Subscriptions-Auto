@@ -1,8 +1,8 @@
 hysteria2://4afd4e1b1b0edd429b10d800a1cf64a7@47.89.232.46:8443?insecure=1&sni=hysteria2.local#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%2047.89.232.46%3A8443
 hysteria2://HowdyHysteria2023w0W@51.15.19.206:8443?insecure=1&obfs=salamander&obfs-password=HysteriaHowdy&sni=sni-here.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2051.15.19.206%3A8443
 hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20HYSTERIA2%20%7C%2062.210.124.146%3A22000
+trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 vless://03033cd9-817d-486d-bb3b-37d92b8346f0@147.135.213.72:20049?security=none&type=ws&path=%2Fvless-ws&encryption=none#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20VLESS%20%7C%20147.135.213.72%3A20049
-vless://03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a@69.48.201.136:30016?security=none&type=ws&path=%2Fusserver&host=uspanel.unixzone.us&encryption=none#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%2069.48.201.136%3A30016
 vless://03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a@69.48.201.136:30016?security=none&type=ws&path=%2Fusserver&host=uspanel.unixzone.us&sni=uspanel.unixzone.us#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%2069.48.201.136%3A30016
 vless://03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a@69.48.201.136:30016?security=none&type=ws&path=%2Fusserver&host=zoom.us&sni=zoom.us#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%2069.48.201.136%3A30016
 vless://03dc60cb-a8d4-4226-93fe-0e6cbf77fe5a@uspanel.unixzone.us:30016?security=none&type=ws&path=%2Fusserver&host=uspanel.unixzone.us#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20uspanel.unixzone.us%3A30016
