@@ -1,6 +1,5 @@
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.184.127%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@158.247.253.243:443?allowInsecure=1&sni=connectgraduateswithjobopeningsandgrowprofessionally.com#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20TROJAN%20%7C%20158.247.253.243%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.15:443?sni=courses.iloverussia2026.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20193.108.119.15%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.78:443?#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20193.108.119.78%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@193.108.119.96:443?sni=learn.iloverussia2026.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20193.108.119.96%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.158%3A443
@@ -34,6 +33,7 @@ vless://1d4e18bd-1f26-4915-b35a-7ace4826e76a@194.61.31.126:2053?security=reality
 vless://2208b003-78b1-453c-b5ca-ce847ff0efd6@d4a338t.pl8.h1clayd.click:443?security=reality&type=raw&packetEncoding=xudp&sni=d4a338t.pl8.h1clayd.click&fp=firefox&flow=xtls-rprx-vision&sid=b545243c33282b73&pbk=0dAUffCns_r-xP3QP1V8qy2P29vBN5ROOoX96TxpvXA#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20VLESS%20%7C%20d4a338t.pl8.h1clayd.click%3A443
 vless://2232d904-8e6a-4202-8240-6efd8aec02e9@31.58.213.31:443?sni=app.streamru2.net&flow=xtls-rprx-vision&fp=firefox&security=tls#%F0%9F%87%A6%F0%9F%87%AA%20United%20Arab%20Emirates%20%7C%20VLESS%20%7C%2031.58.213.31%3A443
 vless://22424ee2-6fe3-42ca-9749-6d4c5a8acc82@188.114.98.0:443?security=tls&type=ws&path=%2Fid-pusat&host=tn1r.eu.cc&packetEncoding=xudp&sni=tn1r.eu.cc&fp=chrome#Unknown%20%7C%20VLESS%20%7C%20188.114.98.0%3A443
+vless://2424febb-43cb-488d-bdd1-401e923c8e48@3h-kazakhstan1.09vpn.com:8443?security=tls&type=ws&path=%2Fvless%2F&packetEncoding=xudp&sni=3h-kazakhstan1.09vpn.com&fp=chrome#%F0%9F%87%B0%F0%9F%87%BF%20Kazakhstan%20%7C%20VLESS%20%7C%203h-kazakhstan1.09vpn.com%3A8443
 vless://24fb9b5b-43b7-4058-a7e5-a0499ada1fda@146.19.254.171:8443?sni=146.19.254.171&flow=xtls-rprx-vision&fp=firefox&security=tls#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20146.19.254.171%3A8443
 vless://25f86cb1-2140-4085-abcb-c3a0ea7a4be0@ov-france1.09vpn.com:80?sni=ov-france1.09vpn.com&type=ws&host=ov-france1.09vpn.com&path=/vless/#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20VLESS%20%7C%20ov-france1.09vpn.com%3A80
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?type=ws&path=/#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20VLESS%20%7C%20152.69.226.63%3A25555
