@@ -1,3 +1,4 @@
 vless://13e541f3-d09d-4633-89df-8513db0ced20@45.86.60.174:16443?encryption=none&type=tcp&security=none#%F0%9F%87%A8%F0%9F%87%BE%20Cyprus%20%7C%20VLESS%20%7C%2045.86.60.174%3A16443
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@87.248.149.50:443?encryption=none&security=tls&sni=base.hosamobenl.co.uk&fp=firefox&type=tcp&headerType=none#%F0%9F%87%AE%F0%9F%87%B7%20Iran%20%7C%20VLESS%20%7C%2087.248.149.50%3A443
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@87.248.149.50:443?security=tls&encryption=none&insecure=0&headerType=none&fp=firefox&type=tcp&allowInsecure=0&sni=base.hosamobenl.co.uk#%F0%9F%87%AE%F0%9F%87%B7%20Iran%20%7C%20VLESS%20%7C%2087.248.149.50%3A443
+vless://7d43670b-6b08-45b9-8a24-8f3971abc132@222.167.245.16:443?security=reality&encryption=none&pbk=j4Uc6ljg9by_VKYywo5h2N-eh3kpUbFL5Bsp8-AX4Qk&headerType=none&fp=chrome&type=tcp&flow=xtls-rprx-vision&sni=poland.biznes.lol#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20VLESS%20%7C%20222.167.245.16%3A443
