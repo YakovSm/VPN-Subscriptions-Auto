@@ -12,7 +12,6 @@ hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com#%F0
 trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 vless://00f1cd55-049c-492c-b15b-df360d8bcde3@51.75.118.18:20113?security=none&type=ws&path=%2Fvless-ws&encryption=none#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20VLESS%20%7C%2051.75.118.18%3A20113
-vless://1751bebc-1bf1-420c-8b9d-97157aad179b@168.110.21.56:18453?security=none&type=tcp&encryption=none#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20VLESS%20%7C%20168.110.21.56%3A18453
 vless://1e92735b-8520-40d7-beb4-dc7d26620b7d@static.216.7.245.188.clients.your-server.de:8443?security=tls&type=tcp&alpn=h2%2Chttp%2F1.1&sni=static.44.128.217.95.clients.your-server.de&fp=chrome&flow=xtls-rprx-vision#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20VLESS%20%7C%20static.216.7.245.188.clients.your-server.de%3A8443
 vless://2006aa32-9ba2-4fe0-bd3d-3deaceb621e1@129.153.128.162:853?security=none&type=ws&path=%2Fws&host=firsty.app&packetEncoding=none#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20129.153.128.162%3A853
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?security=none&type=ws&path=%2F&host=152.69.226.63#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20VLESS%20%7C%20152.69.226.63%3A25555
