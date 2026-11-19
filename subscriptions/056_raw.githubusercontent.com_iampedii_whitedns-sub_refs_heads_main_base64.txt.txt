@@ -9,6 +9,7 @@ hysteria2://HowdyHysteria2023w0W@hysteria.udpgw.com:8443?insecure=1&obfs=salaman
 hysteria2://dongtaiwang.com@62.210.124.146:22000?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20HYSTERIA2%20%7C%2062.210.124.146%3A22000
 hysteria2://linlin-2026@13.55.52.44:36712?insecure=1&sni=13.55.52.44#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20HYSTERIA2%20%7C%2013.55.52.44%3A36712
 hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20HYSTERIA2%20%7C%20129.225.181.46%3A8443
+trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 vless://00f1cd55-049c-492c-b15b-df360d8bcde3@51.75.118.18:20113?security=none&type=ws&path=%2Fvless-ws&encryption=none#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20VLESS%20%7C%2051.75.118.18%3A20113
 vless://1e92735b-8520-40d7-beb4-dc7d26620b7d@static.216.7.245.188.clients.your-server.de:8443?security=tls&type=tcp&alpn=h2%2Chttp%2F1.1&sni=static.44.128.217.95.clients.your-server.de&fp=chrome&flow=xtls-rprx-vision#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20VLESS%20%7C%20static.216.7.245.188.clients.your-server.de%3A8443
 vless://2006aa32-9ba2-4fe0-bd3d-3deaceb621e1@129.153.128.162:853?security=none&type=ws&path=%2Fws&host=firsty.app&packetEncoding=none#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20129.153.128.162%3A853
