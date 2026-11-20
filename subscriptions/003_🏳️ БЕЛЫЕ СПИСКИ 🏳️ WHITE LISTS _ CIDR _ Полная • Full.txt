@@ -108,6 +108,7 @@ vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=
 vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=edge#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
 vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=firefox#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
 vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=ios#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
+vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=random#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
 vless://e5d9306d-06fd-0001-a707-11f21c9b446a@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=safari#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
 vless://f2f13166-4b9d-0001-80a0-de62018e6c71@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=firefox#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
 vless://f2f13166-4b9d-0001-80a0-de62018e6c71@188.68.216.27:443?security=tls&sni=qtuod-ru-56sel.fade.mom&fp=random#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20188.68.216.27%3A443
