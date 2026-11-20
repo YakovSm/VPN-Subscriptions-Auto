@@ -17,10 +17,10 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.59:443?type=tcp#%F0%9F%87%
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.156.212%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.238.104.154:443?type=tcp#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%20%7C%20TROJAN%20%7C%20216.238.104.154%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?type=tcp#%F0%9F%87%A8%F0%9F%87%B1%20Chile%20%7C%20TROJAN%20%7C%2064.176.7.205%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.121%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.13:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.13%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.142%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.147:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.147%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.171%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.242:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.242%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.31%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.76:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.76%3A443
@@ -61,7 +61,6 @@ vless://5744e593-1cc8-48fa-b8ca-57cd494fe35b@172.64.229.129:2052?encryption=none
 vless://57beeeb0-03fc-4fc9-94da-7604488a7134@154.9.240.215:26990?encryption=none&fp=firefox&pbk=KfOrtENkHAXDFlsCluw6fv62Q-WuJXCKI98XZihtemA&security=reality&sid=e51285e3&sni=us1p1.xn--ghq880n3na965a.com&type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20154.9.240.215%3A26990
 vless://622654a4-b666-000b-9260-fb717e05154f@169.40.34.41:443?encryption=none&fp=ios&pbk=6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY&security=reality&sid=1c3e8241a8743df9&sni=key-master-saver.com&type=tcp#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20VLESS%20%7C%20169.40.34.41%3A443
 vless://667016ca-f02e-4b5f-bfc3-3d8ed81e9bec@87.248.149.50:443?encryption=none&security=tls&sni=base.hosamobenl.co.uk&type=tcp#%F0%9F%87%AE%F0%9F%87%B7%20Iran%20%7C%20VLESS%20%7C%2087.248.149.50%3A443
-vless://68512eac-cd53-4de3-8d1e-08f6e04af1a9@13.140.56.100:14430?encryption=none&path=/vless&type=ws#%F0%9F%87%AE%F0%9F%87%B3%20India%20%7C%20VLESS%20%7C%2013.140.56.100%3A14430
 vless://7955bf18-35c4-412d-aabd-c0b36c793063@bhjolq0d0l.flowersgood.top:443?encryption=none&host=bhjolq0d0l.flowersgood.top&path=/service/telemetry/045d381f1166/&security=tls&sni=bhjolq0d0l.flowersgood.top&type=ws#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20bhjolq0d0l.flowersgood.top%3A443
 vless://7955bf18-35c4-412d-aabd-c0b36c793063@nguyxejonb.flowersgood.top:443?encryption=none&host=nguyxejonb.flowersgood.top&path=/service/telemetry/0294da469190/&security=tls&sni=nguyxejonb.flowersgood.top&type=ws#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20nguyxejonb.flowersgood.top%3A443
 vless://814bd064-544d-4255-a070-5705c03f6da9@3.0.111.82:10574?encryption=none&fp=chrome&pbk=k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0&security=reality&sid=48050fab&sni=www.apple.com&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20VLESS%20%7C%203.0.111.82%3A10574
