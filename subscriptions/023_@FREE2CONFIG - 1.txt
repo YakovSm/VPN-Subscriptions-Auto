@@ -1,5 +1,5 @@
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@167.88.61.52:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20167.88.61.52%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.214:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.214%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@169.197.140.224:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20169.197.140.224%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.131:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.131%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.19:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.19%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@170.101.101.211:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20170.101.101.211%3A443
@@ -16,7 +16,10 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.59:443?type=tcp#%F0%9F%87%
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.156.212%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.238.104.154:443?type=tcp#%F0%9F%87%A7%F0%9F%87%B7%20Brazil%20%7C%20TROJAN%20%7C%20216.238.104.154%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?type=tcp#%F0%9F%87%A8%F0%9F%87%B1%20Chile%20%7C%20TROJAN%20%7C%2064.176.7.205%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.31:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.31%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.121:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.121%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.142:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.142%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.147:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.147%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.112.171:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.112.171%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.114.106:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.114.106%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.114.132:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.114.132%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.114.166:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.114.166%3A443
@@ -67,7 +70,7 @@ vless://90157e25-cee1-4217-921e-91f300bc1a24@fduknew.titun.su:443?encryption=non
 vless://9dd38d60-e683-47c6-bd53-d71bdfee78f3@179.43.187.67:443?encryption=none&security=tls&sni=portal.mavexa.ir&type=tcp#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20VLESS%20%7C%20179.43.187.67%3A443
 vless://b83faafc-cbb7-4655-99d4-2c4c39a49d1b@150.95.109.109:2086?encryption=none&type=tcp#%F0%9F%87%BB%F0%9F%87%B3%20Vietnam%20%7C%20VLESS%20%7C%20150.95.109.109%3A2086
 vless://c5f59ef3-9540-49fa-bd1e-c6c2f79df49a@134.255.211.36:443?encryption=none&fp=chrome&pbk=KcI3PoYu2yF7whv-e0C7JnRyUoUiUDu6tOlUBPYYbCk&security=reality&sid=2e96bf6afa823abb&sni=sg-sin.probe.geomyip.com&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20VLESS%20%7C%20134.255.211.36%3A443
-vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@0592efg.us8.h1clayd.click:443?encryption=none&fp=firefox&pbk=cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk&security=reality&serviceName=99f2107b03f8&sid=bd8f712209a9c283&sni=0592efg.us8.h1clayd.click&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%200592efg.us8.h1clayd.click%3A443
+vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@04535dt.us8.h1clayd.click:443?encryption=none&fp=chrome&pbk=UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY&security=reality&sid=ba2a3dce62b99092&sni=04535dt.us8.h1clayd.click&type=tcp#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2004535dt.us8.h1clayd.click%3A443
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.187:443?encryption=none&fp=firefox&pbk=UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY&security=reality&sid=ba2a3dce62b99092&sni=04535dt.us8.h1clayd.click&type=tcp#%F0%9F%87%B8%F0%9F%87%A8%20Seychelles%20%7C%20VLESS%20%7C%20196.245.52.187%3A443
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@79.182.39.131:443?encryption=none&fp=firefox&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&security=reality&serviceName=204adda7e3da&sid=d3bd772514c87d28&sni=717252g.nl8.h1clayd.click&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2079.182.39.131%3A443
 vless://e332f028-d343-5b44-8016-b3130f39e133@81.208.170.142:1500?encryption=none&fp=chrome&pbk=VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE&security=reality&sid=775eb6408888248e&sni=www.ebay.com&type=grpc#%F0%9F%87%B8%F0%9F%87%A6%20Saudi%20Arabia%20%7C%20VLESS%20%7C%2081.208.170.142%3A1500
