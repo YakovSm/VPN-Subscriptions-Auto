@@ -1,1 +1,1 @@
-vless://ff8fc3f9-0c1b-4a6f-97cb-ed1cde4de62d@168.110.21.56:18454?encryption=none#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20VLESS%20%7C%20168.110.21.56%3A18454
+vless://740b2630-b42d-425c-bacd-37e7e30d78f1@subgift.gcorecdn.com:443?alpn=http%2F1.1&encryption=none&host=subgift.gcorecdn.com&path=%2Ft.me-SubGift&security=tls&sni=subgift.gcorecdn.com&type=ws#%F0%9F%87%B1%F0%9F%87%BA%20Luxembourg%20%7C%20VLESS%20%7C%20subgift.gcorecdn.com%3A443
