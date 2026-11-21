@@ -5,6 +5,7 @@ hysteria2://linlin-2026@13.237.192.121:36712?insecure=1#%F0%9F%87%A6%F0%9F%87%BA
 hysteria2://linlin-2026@13.55.52.44:36712?insecure=1#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20HYSTERIA2%20%7C%2013.55.52.44%3A36712
 hysteria2://linlin-2026@13.55.52.44:36712?insecure=1&sni=13.55.52.44#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20HYSTERIA2%20%7C%2013.55.52.44%3A36712
 hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20HYSTERIA2%20%7C%20129.225.181.46%3A8443
+trojan://4FM15SpbYAoy6GIzquvBRjPHsK07aJOT@161.33.45.134:443?sni=www.apple.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20161.33.45.134%3A443
 vless://06a5afa1-2bbc-a5d1-1770-becd1089c636@xray-dmr3b3hy-calm-maple-7.cloady.io:443?security=tls&type=ws&path=%2F0175469f14317d82&host=xray-dmr3b3hy-calm-maple-7.cloady.io&sni=xray-dmr3b3hy-calm-maple-7.cloady.io&fp=chrome&encryption=none#%F0%9F%87%AE%F0%9F%87%B3%20India%20%7C%20VLESS%20%7C%20xray-dmr3b3hy-calm-maple-7.cloady.io%3A443
 vless://0e6cd6ca-fba2-4b86-923c-f0a021f7ad15@142.132.140.143:1003?security=none&type=tcp&encryption=none#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20VLESS%20%7C%20142.132.140.143%3A1003
 vless://1ad82982-f3e1-4b6b-99bf-a9cfdf186b96@172.233.197.105:62867?security=reality&type=tcp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=1f2519bb96e5589c&pbk=U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%20172.233.197.105%3A62867
