@@ -68,6 +68,7 @@ trojan://4c1511d220e1437b234fa40571c43810@tyy129.magiclampcloud.com:59443?sni=ty
 trojan://53b0c468a3ef95de5ec22f517072bdcd@ja304.magiclampcloud.cn:59443?sni=ja304.magiclampcloud.cn&type=tcp#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20ja304.magiclampcloud.cn%3A59443
 trojan://571eebbdb044bdd90d8773babf048844@tyy129.magiclampcloud.com:59443?type=tcp&sni=tyy129.magiclampcloud.com#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20tyy129.magiclampcloud.com%3A59443
 trojan://7e70223b-f331-41d5-9313-02b8d2df2885@krhtybay.catcat321.com:20061?type=raw&security=tls&sni=hk.catxstar.com&alpn=http%2F1.1&fp=chrome&headertype=none#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20krhtybay.catcat321.com%3A20061
+trojan://81352974801287f06ab58f555f45ef0b@ja304.magiclampcloud.cn:59443?allowInsecure=1&sni=ja304.magiclampcloud.cn&type=tcp#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20ja304.magiclampcloud.cn%3A59443
 trojan://81f683c3f594588c69c9494526a57f3d@ja304.magiclampcloud.cn:59443?allowInsecure=1&sni=ja304.magiclampcloud.cn&type=tcp#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20ja304.magiclampcloud.cn%3A59443
 trojan://8560843d8550aa368674c3bf0d4d3ad8@ja262.magiclampcloud.cn:59443?allowInsecure=1&sni=ja262.magiclampcloud.cn&type=tcp#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20ja262.magiclampcloud.cn%3A59443
 trojan://8e0cfdddbb7314e5c110576e7edec1f9@tyy129.magiclampcloud.com:59443?sni=tyy129.magiclampcloud.com&type=tcp#%F0%9F%87%A8%F0%9F%87%B3%20China%20%7C%20TROJAN%20%7C%20tyy129.magiclampcloud.com%3A59443
