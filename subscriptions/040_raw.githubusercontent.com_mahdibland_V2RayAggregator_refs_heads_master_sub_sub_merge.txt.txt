@@ -271,7 +271,6 @@ trojan://humanity@45.130.125.32:443?security=tls&sni=www.calmloud.com&type=ws&pa
 trojan://humanity@45.130.125.75:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#%F0%9F%87%B8%F0%9F%87%A8%20Seychelles%20%7C%20TROJAN%20%7C%2045.130.125.75%3A443
 trojan://humanity@86.38.214.205:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#%F0%9F%87%B1%F0%9F%87%B9%20Lithuania%20%7C%20TROJAN%20%7C%2086.38.214.205%3A443
 trojan://humanity@89.116.46.68:443?security=tls&sni=www.calmloud.com&type=ws&path=/assignment&Host=www.calmloud.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%2089.116.46.68%3A443
-trojan://humanity@ip.myip2.qzz.io:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#Unknown%20%7C%20TROJAN%20%7C%20ip.myip2.qzz.io%3A443
 trojan://humanity@www.calmlunch.com:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#Unknown%20%7C%20TROJAN%20%7C%20www.calmlunch.com%3A443
 trojan://humanity@www.speedtest.org:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#Unknown%20%7C%20TROJAN%20%7C%20www.speedtest.org%3A443
 trojan://idc117okt@103.226.139.201:443?security=tls#%F0%9F%87%AE%F0%9F%87%A9%20Indonesia%20%7C%20TROJAN%20%7C%20103.226.139.201%3A443
