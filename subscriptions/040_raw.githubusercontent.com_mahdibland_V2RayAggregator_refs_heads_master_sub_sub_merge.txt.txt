@@ -21,7 +21,6 @@ trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sn
 trojan://14bdba6dede262387ebdebaa706e1c90@trs12.bolab.net:443?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20trs12.bolab.net%3A443
 trojan://16bcc187-a1a0-4b8a-8b69-627f38b7cc0d@15.235.197.4:80?security=tls&sni=15.235.197.4#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.197.4%3A80
 trojan://16bcc187-a1a0-4b8a-8b69-627f38b7cc0d@15.235.197.4:80?security=tls&sni=getandroid.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.197.4%3A80
-trojan://255c924c-1314-4084-9a9e-1d1a82a5cf49@us2.trojanvh.xyz:80?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20us2.trojanvh.xyz%3A80
 trojan://38f169d6-d202-4b1b-8db8-e6eb1648f5cf@43.160.197.160:443?security=tls#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2043.160.197.160%3A443
 trojan://4863e1b2-ec2f-4c71-b862-ce533028e57e@trus.moonfree.top:443?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20trus.moonfree.top%3A443
 trojan://4d048fc6-d944-41dd-b327-10856adcc82d@zi.you.usdtvfk.top:443?security=tls&sni=zi.you.usdtvfk.top#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20zi.you.usdtvfk.top%3A443
@@ -89,6 +88,7 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.co.u
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.com.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.com.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.dp.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.dp.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.if.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.if.ua%3A8443
+trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.ivano-frankivsk.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.ivano-frankivsk.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.kiev.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.kiev.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.kyiv.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.kyiv.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.net.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.net.ua%3A8443
@@ -96,6 +96,7 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.org.
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.chernigov.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.chernigov.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.ivano-frankivsk.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.ivano-frankivsk.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kharkov.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kharkov.ua%3A2053
+trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kherson.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kherson.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kiev.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kiev.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kyiv.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kyiv.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odesa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odesa.ua%3A2053
