@@ -8,7 +8,6 @@ trojan://0f5e6d9a-49af-4bc0-b04b-503102382144@51.195.219.173:443?security=tls&sn
 trojan://16bcc187-a1a0-4b8a-8b69-627f38b7cc0d@15.235.197.4:80?security=tls&sni=getandroid.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.197.4%3A80
 trojan://38f169d6-d202-4b1b-8db8-e6eb1648f5cf@43.160.197.160:443?security=tls#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2043.160.197.160%3A443
 trojan://4863e1b2-ec2f-4c71-b862-ce533028e57e@trus.moonfree.top:443?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20trus.moonfree.top%3A443
-trojan://4d706727-996f-4427-930d-60f3bd414cf9@cnamemt.ciscocdn1.live:443?security=tls&sni=c2mt.ciscocdn1.live&type=ws&path=/rDCYQta83d0oPABKBhcIX&Host=c2mt.ciscocdn1.live#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%20cnamemt.ciscocdn1.live%3A443
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@188.253.12.15:41943?security=tls&sni=az.01.naiun.bilibili.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20188.253.12.15%3A41943
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@188.253.12.15:45553?security=tls&sni=ch.01.naiun.bilibili.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20188.253.12.15%3A45553
 trojan://4f4d1167-ef14-4304-9bce-0740472503ef@188.253.12.15:45619?security=tls&sni=fr.01.naiun.bilibili.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20188.253.12.15%3A45619
