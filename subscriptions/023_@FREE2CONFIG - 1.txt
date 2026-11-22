@@ -12,6 +12,8 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.54:443?type=tcp#%F0%9F%87%
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.155.59:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.155.59%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.156.212:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.152.156.212%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@64.176.7.205:443?type=tcp#%F0%9F%87%A8%F0%9F%87%B1%20Chile%20%7C%20TROJAN%20%7C%2064.176.7.205%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.166:443?type=tcp#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.166%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.62:443?type=tcp#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.62%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.113:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.113%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.25:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.25%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.122.46:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2066.163.122.46%3A443
@@ -58,3 +60,4 @@ vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@04535dt.us8.h1clayd.click:443?encry
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@0592efg.us8.h1clayd.click:443?encryption=none&fp=firefox&pbk=cO3wYHISTeorXcM8ffaDCDdqZ-olBQL-GyZqb-W7rTk&security=reality&serviceName=99f2107b03f8&sid=bd8f712209a9c283&sni=0592efg.us8.h1clayd.click&type=grpc#%F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%20%7C%20VLESS%20%7C%200592efg.us8.h1clayd.click%3A443
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@196.245.52.187:443?encryption=none&fp=firefox&pbk=UoS8qZ74hP_ECcncCz55lzvlcVss3R7VA0WYZE0YQCY&security=reality&sid=ba2a3dce62b99092&sni=04535dt.us8.h1clayd.click&type=tcp#%F0%9F%87%B8%F0%9F%87%A8%20Seychelles%20%7C%20VLESS%20%7C%20196.245.52.187%3A443
 vless://cda0862a-0f87-4be9-8ed8-1d0c9e382839@79.182.39.131:443?encryption=none&fp=firefox&pbk=PD8Jdlg3xB9QY--jwQjp8PFPzCS8-Oryw6-HWBcHMFU&security=reality&serviceName=204adda7e3da&sid=d3bd772514c87d28&sni=717252g.nl8.h1clayd.click&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2079.182.39.131%3A443
+vless://e332f028-d343-5b44-8016-b3130f39e133@81.208.170.142:1500?encryption=none&fp=chrome&pbk=VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE&security=reality&sid=775eb6408888248e&sni=www.ebay.com&type=grpc#%F0%9F%87%B8%F0%9F%87%A6%20Saudi%20Arabia%20%7C%20VLESS%20%7C%2081.208.170.142%3A1500
