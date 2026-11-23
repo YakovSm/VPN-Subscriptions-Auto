@@ -1,10 +1,7 @@
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.184.127%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.158%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?sni=courses.yourultimateprofessionalcareerhub.com#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.33%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.152%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.74:443?#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.74%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.79:443?allowInsecure=0&sni=blog.connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.79%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.93:443?sni=connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.93%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?sni=connectwithemployerstohireyouridealteam.com#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%2045.63.30.142%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.203%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.244%3A443
@@ -28,7 +25,6 @@ vless://0fc0ded7-32b3-4e36-a623-6e7670225247@45.133.73.167:443?sni=zmxoo.de5.net
 vless://11111111-2222-3333-4444-555555555555@jdxl.cf.090227.xyz:443?&security=tls&fp=chrome&sni=notified-rendered-moore-consideration.trycloudflare.com&type=ws&headerType=none&host=notified-rendered-moore-consideration.trycloudflare.com&path=%2Ftg-jiedianxielou#Unknown%20%7C%20VLESS%20%7C%20jdxl.cf.090227.xyz%3A443
 vless://1af36694-b548-4b18-89a0-bc076eab4ed7@178.172.227.124:10443?#%F0%9F%87%A7%F0%9F%87%BE%20Belarus%20%7C%20VLESS%20%7C%20178.172.227.124%3A10443
 vless://24fb9b5b-43b7-4058-a7e5-a0499ada1fda@146.19.254.171:8443?sni=146.19.254.171&flow=xtls-rprx-vision&fp=firefox&security=tls#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%20146.19.254.171%3A8443
-vless://25f86cb1-2140-4085-abcb-c3a0ea7a4be0@ov-france1.09vpn.com:80?sni=ov-france1.09vpn.com&type=ws&host=ov-france1.09vpn.com&path=/vless/#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20VLESS%20%7C%20ov-france1.09vpn.com%3A80
 vless://27c5483f-17f4-48ae-9a04-def53d88440d@152.69.226.63:25555?type=ws&path=/#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20VLESS%20%7C%20152.69.226.63%3A25555
 vless://29f178f7-f96f-46ba-8fc0-bbcd690ba788@82.118.16.189:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=firefox&flow=xtls-rprx-vision&sid=1e9a49dd374c1191&pbk=zmo2VkZkfjh2kWjaRghXUs39ImQo87LmPhjvzbX3yB4&encryption=none#%F0%9F%87%AE%F0%9F%87%B9%20Italy%20%7C%20VLESS%20%7C%2082.118.16.189%3A443
 vless://2f12e5b5-6ce7-47ab-88b9-6110c1a3fc60@vless.cloudxzw2027.ccwu.cc:443?&security=tls&fp=chrome&sni=vless.cloudxzw2027.ccwu.cc&type=ws&headerType=none&host=vless.cloudxzw2027.ccwu.cc&path=%2Fxzw#Unknown%20%7C%20VLESS%20%7C%20vless.cloudxzw2027.ccwu.cc%3A443
