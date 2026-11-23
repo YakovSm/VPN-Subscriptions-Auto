@@ -7,6 +7,7 @@ hysteria2://linlin-2026@13.55.52.44:36712?insecure=1&sni=13.55.52.44#%F0%9F%87%A
 hysteria2://linlin-2026@3.106.35.101:36712?insecure=1#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20HYSTERIA2%20%7C%203.106.35.101%3A36712
 hysteria2://linlin-2026@3.106.35.101:36712?insecure=1&sni=3.106.35.101#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20HYSTERIA2%20%7C%203.106.35.101%3A36712
 hysteria2://oracle_hy2_pass_2026@129.225.181.46:8443?insecure=1&sni=bing.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20HYSTERIA2%20%7C%20129.225.181.46%3A8443
+trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?sni=www.microsoft.com&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 trojan://WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0@43.156.36.253:443?sni=tx-hy2&allowInsecure=1&type=tcp#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2043.156.36.253%3A443
 trojan://WvH8ooM9hom4KOOJHFJz1x5umE0aV4R0@43.156.36.253:443?sni=tx-hy2&allowInsecure=1&type=tcp&fp=chrome#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2043.156.36.253%3A443
 vless://04bcfbb8-06d1-4922-ad5a-54ab28b1afda@40.233.1.77:61503?security=reality&type=tcp&packetEncoding=none&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=1f2519bb96e5589c&pbk=U7t4RFE9MSMtC-o1DoJ8pYzKMfgVpTg6ZhTTknBrVkU#%F0%9F%87%B2%F0%9F%87%BD%20Mexico%20%7C%20VLESS%20%7C%2040.233.1.77%3A61503
