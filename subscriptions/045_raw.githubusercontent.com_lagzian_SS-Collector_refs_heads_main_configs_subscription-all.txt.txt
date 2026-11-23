@@ -1,11 +1,11 @@
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@15.235.184.127:443?allowInsecure=0&sni=exploredigitaljobplatformandfindonlinework.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2015.235.184.127%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.158:443?#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.158%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@208.69.78.33:443?sni=courses.yourultimateprofessionalcareerhub.com#%F0%9F%87%A8%F0%9F%87%AD%20Switzerland%20%7C%20TROJAN%20%7C%20208.69.78.33%3A443
-trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.74:443?#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.74%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@45.63.30.142:443?sni=connectwithemployerstohireyouridealteam.com#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%2045.63.30.142%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.203%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.244%3A443
-trojan://12012@47.242.93.89:12012?allowInsecure=1&sni=ali-hk.b-gfw.cfd#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%2047.242.93.89%3A12012
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.215%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.225%3A443
 trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@77.93.89.2:443?allowInsecure=1&sni=bgsg1.hikigo.com#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%2077.93.89.2%3A443
 trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@i1tr.mateflora.com:443?allowInsecure=1&sni=i1tr.mateflora.com#%F0%9F%87%AE%F0%9F%87%A9%20Indonesia%20%7C%20TROJAN%20%7C%20i1tr.mateflora.com%3A443
 trojan://57beeeb0-03fc-4fc9-94da-7604488a7134@nb1hk.hikigo.com:443?allowInsecure=1&sni=nb1hk.hikigo.com#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20nb1hk.hikigo.com%3A443
@@ -82,5 +82,6 @@ vless://dbf3f074-3b18-43f3-b82a-debd8c879c69@136.176.68.34:443?security=reality&
 vless://dc2259c4-388e-4285-ba18-df619b6672b6@82.118.16.187:443?security=reality&type=tcp&packetEncoding=xudp&sni=www.cloudflare.com&fp=chrome&flow=xtls-rprx-vision&sid=cd6065902eea7a02&pbk=R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU#%F0%9F%87%AE%F0%9F%87%B9%20Italy%20%7C%20VLESS%20%7C%2082.118.16.187%3A443
 vless://ead3595f-4020-4e76-a3ec-c248e1a2f2f7@free.fugui.lol:19482?encryption=none&flow=xtls-rprx-vision&security=reality&sni=swdist.apple.com&fp=ios&pbk=IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ&sid=fa514b83&type=tcp&headerType=none#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20VLESS%20%7C%20free.fugui.lol%3A19482
 vless://ead3595f-4020-4e76-a3ec-c248e1a2f2f7@free.fugui.lol:47396?encryption=none&flow=xtls-rprx-vision&security=reality&sni=swdist.apple.com&fp=chrome&pbk=IjWYbHNrZb3UCQxsTJyekEOA3tHq42L6Jw3O8MmLYVQ&sid=fa514b83&type=tcp&headerType=none&host=swdist.apple.com#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20VLESS%20%7C%20free.fugui.lol%3A47396
+vless://ef5a57c7-84d5-4f86-b99c-875a16da485f@48.102.173.24:444?&security=tls&fp=firefox&sni=neplay603.gangtype.com&type=ws&headerType=none&host=neplay603.gangtype.com&path=%2Fstream%2Fupdates%2Fa66d7902#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2048.102.173.24%3A444
 vless://fbe22815-0718-4eae-816f-e91c67d15b54@185.125.50.21:2053?sni=185.125.50.21&flow=xtls-rprx-vision&fp=firefox&security=tls#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20VLESS%20%7C%20185.125.50.21%3A2053
 vless://fd90e601-a56c-42b8-aab7-aa02d26fcb04@46.243.205.192:443?&security=tls&fp=chrome&sni=46.243.205.192&type=ws&headerType=none&host=46.243.205.192&path=%2Fcatalog%2Ffeed%2FH9eui7WsW3xS#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%2046.243.205.192%3A443
