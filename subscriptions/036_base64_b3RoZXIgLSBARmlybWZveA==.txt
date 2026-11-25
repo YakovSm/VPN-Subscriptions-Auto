@@ -50,8 +50,8 @@ hysteria2://BWAFlp8g53@hys28.wba-pn.ru:443/?insecure=1#Unknown%20%7C%20HYSTERIA2
 hysteria2://BWAFlp8g53@hys28.wba-pn.ru:443?insecure=1#Unknown%20%7C%20HYSTERIA2%20%7C%20hys28.wba-pn.ru%3A443
 hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@31.76.30.97:443/?insecure=1&sni=fast.wwwinternetvideo.click#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%2031.76.30.97%3A443
 hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@31.76.30.97:443?insecure=1&sni=fast.wwwinternetvideo.click#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%2031.76.30.97%3A443
-hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@fast.wwwinternetvideo.click:443/?insecure=1&sni=fast.wwwinternetvideo.click#Unknown%20%7C%20HYSTERIA2%20%7C%20fast.wwwinternetvideo.click%3A443
-hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@fast.wwwinternetvideo.click:443?insecure=1&sni=fast.wwwinternetvideo.click#Unknown%20%7C%20HYSTERIA2%20%7C%20fast.wwwinternetvideo.click%3A443
+hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@fast.wwwinternetvideo.click:443/?insecure=1&sni=fast.wwwinternetvideo.click#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%20fast.wwwinternetvideo.click%3A443
+hysteria2://C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE@fast.wwwinternetvideo.click:443?insecure=1&sni=fast.wwwinternetvideo.click#%F0%9F%87%AB%F0%9F%87%AE%20Finland%20%7C%20HYSTERIA2%20%7C%20fast.wwwinternetvideo.click%3A443
 hysteria2://CnVfXXvMzh@72.56.92.120:443/?insecure=1&sni=hys13.wba-pn.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2072.56.92.120%3A443
 hysteria2://CnVfXXvMzh@72.56.92.120:443?insecure=1&sni=hys13.wba-pn.ru#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20HYSTERIA2%20%7C%2072.56.92.120%3A443
 hysteria2://CnVfXXvMzh@hys13.wba-pn.ru:443/?insecure=1&sni=hys13.wba-pn.ru#Unknown%20%7C%20HYSTERIA2%20%7C%20hys13.wba-pn.ru%3A443
