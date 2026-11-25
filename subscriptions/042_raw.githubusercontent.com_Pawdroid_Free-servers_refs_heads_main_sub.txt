@@ -1,2 +1,0 @@
-hysteria2://https%3A%2F%2Fxship.2fa.cat@starlink-ft.251313.xyz:443?insecure=1&security=tls&sni=xship.top#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20starlink-ft.251313.xyz%3A443
-vless://00000000-0000-0001-0000-000000000000@136.148.83.71:443?&security=tls&fp=qq&sni=wccfu-ru-79dc.my-fade.cloud&type=tcp&headerType=none&path=%2F#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20136.148.83.71%3A443
