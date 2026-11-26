@@ -86,5 +86,4 @@ vless://db4b5d79-a741-41c8-9769-c1ba3d7ac374@89.44.80.204:443?security=tls&type=
 vless://eb62cabf-5901-403a-aa0c-b1d9ed1b346d@213.183.41.31:8459?security=tls&type=ws&path=%2Fws&sni=photos.plumstatic.com&fp=firefox#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20213.183.41.31%3A8459
 vless://eb62cabf-5901-403a-aa0c-b1d9ed1b346d@213.183.41.31:8463?security=tls&type=ws&path=%2Fws&sni=share.plumstatic.com&fp=firefox&encryption=none#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20213.183.41.31%3A8463
 vless://eb62cabf-5901-403a-aa0c-b1d9ed1b346d@213.183.45.23:8450?security=tls&type=ws&path=%2Fws&sni=fonts.plumstatic.com&fp=firefox&encryption=none#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%20213.183.45.23%3A8450
-vless://f67b1159-a61f-4ae4-9844-0701b716a290@155.248.175.201:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=firefox&flow=xtls-rprx-vision#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20VLESS%20%7C%20155.248.175.201%3A23169
 vless://f67b1159-a61f-4ae4-9844-0701b716a290@djj.zjlo.top:23169?security=tls&type=tcp&sni=djj.zjlo.top&fp=chrome&flow=xtls-rprx-vision#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20VLESS%20%7C%20djj.zjlo.top%3A23169
