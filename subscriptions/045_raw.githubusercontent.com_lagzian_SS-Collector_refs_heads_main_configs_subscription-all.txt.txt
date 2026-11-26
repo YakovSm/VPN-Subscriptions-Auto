@@ -5,6 +5,7 @@ trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.152:443?#%F0%9F%87%A8%F0%9
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.74:443?#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.74%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.79:443?allowInsecure=0&sni=blog.connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.79%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@216.152.147.93:443?sni=connectingpeoplewithgreatjobs.com#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20216.152.147.93%3A443
+trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.203:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.203%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.118.244:443?#%F0%9F%87%AA%F0%9F%87%B8%20Spain%20%7C%20TROJAN%20%7C%2066.163.118.244%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.215:443?#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.215%3A443
 trojan://0ab6c98dae3b48e8b9c4a776b6c9c19a@66.163.127.225:443?sni=cdn.indyourperfectremotetechjobfromthecomfortofhome.com#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20TROJAN%20%7C%2066.163.127.225%3A443
@@ -15,6 +16,7 @@ trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr1.tube-cat.com:28478?allowInse
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr2.tube-cat.com:59188?allowInsecure=1&sni=r.tw3.cat.bilibili.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20ddrr2.tube-cat.com%3A59188
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@sclass-01.catcat321.com:20103?security=tls&sni=hk.catxstar.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20sclass-01.catcat321.com%3A20103
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?allowInsecure=1&sni=hk.catxstar.com#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20sclass-00.catcat321.com%3A20123
+vless://04920673-035c-410d-94e4-5b1469d3fb6f@91.132.190.161:443?sni=171.22.183.166&alpn=h2%2Chttp/1.1&flow=xtls-rprx-vision&fp=firefox&security=tls#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%2091.132.190.161%3A443
 vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@193.124.56.100:443?&security=tls&fp=firefox&sni=parchment.merlano.monster&type=ws&headerType=none&host=parchment.merlano.monster&path=%2Fapi%2Fde7%2Fstream#%F0%9F%87%A8%F0%9F%87%BF%20Czechia%20%7C%20VLESS%20%7C%20193.124.56.100%3A443
 vless://0b6a7fe0-206b-4071-9f96-cd397d1ec01a@5.129.253.99:443?sni=rookery.moltex.click&alpn=h2%2Chttp/1.1&type=grpc&serviceName=glush.de3.v1&fp=firefox&security=tls#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20VLESS%20%7C%205.129.253.99%3A443
 vless://1af36694-b548-4b18-89a0-bc076eab4ed7@178.172.227.124:10443?#%F0%9F%87%A7%F0%9F%87%BE%20Belarus%20%7C%20VLESS%20%7C%20178.172.227.124%3A10443
