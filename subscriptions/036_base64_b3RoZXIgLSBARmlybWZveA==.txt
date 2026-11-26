@@ -128,7 +128,7 @@ hysteria2://bce6c821-200d-421f-bf3d-7159e5246ea0@hy2.123266.xyz:33333?sni=hy2.12
 hysteria2://cdfb74db-f288-4271-960d-6d31c4ef75cc@tomsk.gosgenarchive.com:8443?security=tls&obfs=salamander&alpn=h3&obfs-password=x9KvL2mP4nC72H3w&insecure=0&sni=tomsk.gosgenarchive.com#%F0%9F%87%B5%F0%9F%87%B1%20Poland%20%7C%20HYSTERIA2%20%7C%20tomsk.gosgenarchive.com%3A8443
 hysteria2://d1gkicdgem3bsoaa@panel.autonetshop.ir:43345?security=tls&obfs=salamander&obfs-password=km9oqmefh2km1i5n&insecure=0&sni=panel.autonetshop.ir#%F0%9F%87%B9%F0%9F%87%B7%20T%C3%BCrkiye%20%7C%20HYSTERIA2%20%7C%20panel.autonetshop.ir%3A43345
 hysteria2://d4ca9415f0eac7897472e1e5b86d2e96@50.7.38.243:443/?insecure=1&sni=promo.betust.net#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20%7C%20HYSTERIA2%20%7C%2050.7.38.243%3A443
-hysteria2://d7121b33-e335-4921-bb00-4c0b157e7fc1@r7m4.scan-cdn.com:443?sni=r7m4.scan-cdn.com#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20r7m4.scan-cdn.com%3A443
+hysteria2://d7121b33-e335-4921-bb00-4c0b157e7fc1@r7m4.scan-cdn.com:443?sni=r7m4.scan-cdn.com#Unknown%20%7C%20HYSTERIA2%20%7C%20r7m4.scan-cdn.com%3A443
 hysteria2://dongtaiwang.com@142.249.37.90:44356/?sni=hy2.561891.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20142.249.37.90%3A44356
 hysteria2://dongtaiwang.com@142.249.37.90:44356?sni=hy2.561891.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20HYSTERIA2%20%7C%20142.249.37.90%3A44356
 hysteria2://dongtaiwang.com@62.210.124.146:22000/?insecure=1&sni=www.microsoft.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20HYSTERIA2%20%7C%2062.210.124.146%3A22000
