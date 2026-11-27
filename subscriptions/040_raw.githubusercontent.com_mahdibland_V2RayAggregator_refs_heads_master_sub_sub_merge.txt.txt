@@ -73,7 +73,6 @@ trojan://6c862415-30d2-4813-8e49-42e99a0bd415@104.16.72.101:443?security=tls&sni
 trojan://6e3b4240-38f9-4321-9b3c-bc669a34b848@141.94.76.177:443?security=tls#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20TROJAN%20%7C%20141.94.76.177%3A443
 trojan://7118b5f4-0ea4-4c11-be7f-11471cb91e4a@144.24.72.126:443?security=tls#%F0%9F%87%B0%F0%9F%87%B7%20South%20Korea%20%7C%20TROJAN%20%7C%20144.24.72.126%3A443
 trojan://800eb26c-cd0c-4269-aae7-e63d75de4edd@135.148.148.4:80?security=tls&sni=us3.trojanvh.xyz#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20135.148.148.4%3A80
-trojan://81d93f62-15a2-4994-adb9-0b5d906aac7e@31.72img.xyz:443?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%2031.72img.xyz%3A443
 trojan://81d93f62-15a2-4994-adb9-0b5d906aac7e@60.72img.xyz:443?security=tls#%F0%9F%87%A6%F0%9F%87%BA%20Australia%20%7C%20TROJAN%20%7C%2060.72img.xyz%3A443
 trojan://8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272@185.44.76.188:443?security=tls#%F0%9F%87%AC%F0%9F%87%A7%20United%20Kingdom%20%7C%20TROJAN%20%7C%20185.44.76.188%3A443
 trojan://8800c518-e68a-4441-a45c-cd67855784c8@hk1.sanfen001.pics:443?security=tls&sni=hk1.sanfen001.pics#Unknown%20%7C%20TROJAN%20%7C%20hk1.sanfen001.pics%3A443
@@ -109,7 +108,6 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odesa.ua:
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odessa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odessa.ua%3A2053
 trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20119.246.1.143%3A443
 trojan://Cl150MQWlG@209.250.236.93:443?security=tls&sni=irancell-ir-4.mmdruby13.store&type=grpc#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20209.250.236.93%3A443
-trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 trojan://HdsUZmsHQW@148.113.141.99:443?security=tls#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20148.113.141.99%3A443
 trojan://IQ68037294@apt-midge.rooster465.autos:443?security=tls#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20apt-midge.rooster465.autos%3A443
 trojan://MiTiVPN@188.114.97.6:443?security=tls#Unknown%20%7C%20TROJAN%20%7C%20188.114.97.6%3A443
