@@ -39,6 +39,7 @@ trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.32:443?type=tcp#%F0%9F%87%B
 trojan://FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF@95.143.196.97:443?type=tcp#%F0%9F%87%B8%F0%9F%87%AA%20Sweden%20%7C%20TROJAN%20%7C%2095.143.196.97%3A443
 trojan://dba20dcb635e430fa4d3bfc303a149d2@216.106.186.32:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.32%3A443
 trojan://f0eb8c92ce8946aaba856569cff1a16b@216.106.186.33:443?type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20216.106.186.33%3A443
+vless://055a1ce8-2a16-4a0d-a2c2-22826c9b2413@47.253.226.114:443?encryption=none&fp=chrome&pbk=Svl81isn16RPAFnjtmYw7A6TPnsEPLHuYYaJht65Rzc&security=reality&sni=www.cloudflare.com&type=tcp#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20VLESS%20%7C%2047.253.226.114%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.147:443?encryption=none&security=tls&serviceName=home.v1.ObjectService&sni=tracker.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2089.105.195.147%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.148:443?encryption=none&security=tls&serviceName=gw.v2.PushService&sni=api.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2089.105.195.148%3A443
 vless://1653818d-532e-46be-b825-384107fb7c3a@89.105.195.151:443?encryption=none&security=tls&serviceName=hub.v1.ObjectService&sni=edge.mediacorphub.org&type=grpc#%F0%9F%87%B3%F0%9F%87%B1%20The%20Netherlands%20%7C%20VLESS%20%7C%2089.105.195.151%3A443
