@@ -138,6 +138,7 @@ trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@5yh45.cf.877774.xyz:443?security=t
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@68.64.180.218:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2068.64.180.218%3A443
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@85.206.161.198:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%B1%F0%9F%87%B9%20Lithuania%20%7C%20TROJAN%20%7C%2085.206.161.198%3A443
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr1.tube-cat.com:28478?security=tls&sni=r.tw2.cat.bilibili.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20ddrr1.tube-cat.com%3A28478
+trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr2.tube-cat.com:59188?security=tls&sni=r.tw3.cat.bilibili.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20ddrr2.tube-cat.com%3A59188
 trojan://d9064589-74af-432a-9390-5d8a9da281bf@sclass-00.catcat321.com:20123?security=tls&sni=hk.catxstar.com#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20sclass-00.catcat321.com%3A20123
 trojan://dbf9bf9c-2c3f-474a-8031-d4c00666a989@129.146.190.42:443?security=tls#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%20129.146.190.42%3A443
 trojan://e0d44ae7-cb7d-4acc-a8c0-9861a6f5eaad@51.91.11.29:80?security=tls&sni=asriran.com#%F0%9F%87%AB%F0%9F%87%B7%20France%20%7C%20TROJAN%20%7C%2051.91.11.29%3A80
@@ -271,6 +272,7 @@ trojan://humanity@45.130.125.32:443?security=tls&sni=www.calmloud.com&type=ws&pa
 trojan://humanity@45.130.125.75:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#%F0%9F%87%B8%F0%9F%87%A8%20Seychelles%20%7C%20TROJAN%20%7C%2045.130.125.75%3A443
 trojan://humanity@86.38.214.205:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#%F0%9F%87%B1%F0%9F%87%B9%20Lithuania%20%7C%20TROJAN%20%7C%2086.38.214.205%3A443
 trojan://humanity@89.116.46.68:443?security=tls&sni=www.calmloud.com&type=ws&path=/assignment&Host=www.calmloud.com#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%2089.116.46.68%3A443
+trojan://humanity@ip.myip2.qzz.io:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#Unknown%20%7C%20TROJAN%20%7C%20ip.myip2.qzz.io%3A443
 trojan://humanity@www.calmlunch.com:443?security=tls&sni=www.calmlunch.com&type=ws&path=/assignment&Host=www.calmlunch.com#Unknown%20%7C%20TROJAN%20%7C%20www.calmlunch.com%3A443
 trojan://humanity@www.speedtest.org:443?security=tls&sni=www.ignitelimit.com&type=ws&path=/assignment&Host=www.ignitelimit.com#Unknown%20%7C%20TROJAN%20%7C%20www.speedtest.org%3A443
 trojan://idc117okt@103.226.139.201:443?security=tls#%F0%9F%87%AE%F0%9F%87%A9%20Indonesia%20%7C%20TROJAN%20%7C%20103.226.139.201%3A443
