@@ -99,14 +99,15 @@ trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.kyiv
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.net.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.net.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.taipeicitygovernment.org.ua:8443?security=tls#%F0%9F%87%B9%F0%9F%87%BC%20Taiwan%20%7C%20TROJAN%20%7C%20official.taipeicitygovernment.org.ua%3A8443
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.chernigov.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.chernigov.ua%3A2053
+trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.ivano-frankivsk.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.ivano-frankivsk.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kharkov.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kharkov.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kherson.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kherson.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kiev.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kiev.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.kyiv.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.kyiv.ua%3A2053
-trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odesa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odesa.ua%3A2053
 trojan://96983eb4-c8f1-316e-ab00-500014ed3d8b@official.tokyometropolis.odessa.ua:2053?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20official.tokyometropolis.odessa.ua%3A2053
 trojan://BxceQaOe@119.246.1.143:443?security=tls&sni=t.me/ripaojiedian#%F0%9F%87%AD%F0%9F%87%B0%20Hong%20Kong%20%7C%20TROJAN%20%7C%20119.246.1.143%3A443
 trojan://Cl150MQWlG@209.250.236.93:443?security=tls&sni=irancell-ir-4.mmdruby13.store&type=grpc#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%20209.250.236.93%3A443
+trojan://F3NzMNuYnG7akU2mSlBY@193.123.160.109:8443?security=tls#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20193.123.160.109%3A8443
 trojan://HdsUZmsHQW@148.113.141.99:443?security=tls#%F0%9F%87%A8%F0%9F%87%A6%20Canada%20%7C%20TROJAN%20%7C%20148.113.141.99%3A443
 trojan://IQ68037294@apt-midge.rooster465.autos:443?security=tls#%F0%9F%87%B8%F0%9F%87%AC%20Singapore%20%7C%20TROJAN%20%7C%20apt-midge.rooster465.autos%3A443
 trojan://MiTiVPN@188.114.97.6:443?security=tls#Unknown%20%7C%20TROJAN%20%7C%20188.114.97.6%3A443
@@ -135,7 +136,6 @@ trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@172.66.0.172:443?security=tls&sni=
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@194.87.196.133:2053?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%B7%F0%9F%87%BA%20Russia%20%7C%20TROJAN%20%7C%20194.87.196.133%3A2053
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@46.101.110.88:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%A9%F0%9F%87%AA%20Germany%20%7C%20TROJAN%20%7C%2046.101.110.88%3A443
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@5yh45.cf.877774.xyz:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#Unknown%20%7C%20TROJAN%20%7C%205yh45.cf.877774.xyz%3A443
-trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@68.64.180.218:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%BA%F0%9F%87%B8%20United%20States%20%7C%20TROJAN%20%7C%2068.64.180.218%3A443
 trojan://c2cc86b4-4481-4807-ac9e-24e2d7041248@85.206.161.198:443?security=tls&sni=eofino.bpjp2027.top&type=ws&path=/images&Host=eofino.bpjp2027.top#%F0%9F%87%B1%F0%9F%87%B9%20Lithuania%20%7C%20TROJAN%20%7C%2085.206.161.198%3A443
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr1.tube-cat.com:28478?security=tls&sni=r.tw2.cat.bilibili.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20ddrr1.tube-cat.com%3A28478
 trojan://d7563108-615c-4338-a7bd-77f359869a4a@ddrr2.tube-cat.com:59188?security=tls&sni=r.tw3.cat.bilibili.com#%F0%9F%87%AF%F0%9F%87%B5%20Japan%20%7C%20TROJAN%20%7C%20ddrr2.tube-cat.com%3A59188
